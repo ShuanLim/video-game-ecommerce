@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import 'semantic-ui-css/semantic.min.css'
+import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
