@@ -1,9 +1,9 @@
 
 // import 'semantic-ui-css/semantic.min.css'
-import Header from './components/Header';
-import Nav from './components/Nav';
+import Header from './Components/Header';
+import Nav from './Components/Nav';
 import './App.css';
-import Body from './components/Body';
+import Body from './Components/Body';
 
 function App() {
   return (
