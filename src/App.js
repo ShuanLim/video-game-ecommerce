@@ -1,14 +1,22 @@
-// import logo from './logo.svg';
+
+// import 'semantic-ui-css/semantic.min.css'
+import Header from './components/Header';
+import Nav from './components/Nav';
 import './App.css';
+import Body from './components/Body';
 
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header"> */}
-      <h1>Hello World!</h1>
-      {/* </header> */}
+      <Header></Header>
+      <Body></Body>
+       {/* root.render({Body}); */}
+
+
     </div>
+    
   );
 }
+
 
 export default App;
