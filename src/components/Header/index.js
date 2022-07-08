@@ -12,11 +12,12 @@
 import React from 'react'
 import { Item } from 'semantic-ui-react'
 
+
 const ItemExampleItems = () => (
   <Item.Group>
 
     <Item>
-      <Item.Image class="ui tiny image"  src='pixel-heart.jpg' alt='Heart logo'/>
+      <Item.Image class="ui tiny image"  src='rocket-.png' alt='Heart logo'/>
       <div></div>
       <Item.Content>
         <h1>

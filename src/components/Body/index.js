@@ -8,14 +8,18 @@ function Body() {
 
 return (
   <section>
-    <h1>Checkout our super awesome games!</h1>
+    {/* <h1>Checkout our super awesome games!</h1>
 
 <div class="ui small images">
 <img src="mariobro.png" alt='Mario Brother'/>
 <img src="bf2042cover.png" alt='BF 2042'/>
 <img src="halo4.png" alt='Halo4'/>
 <img src="godsofwar.png" alt='Gods of War'/>
-</div>
+</div> */}
+
+
+
+ 
 
 {/* // USe effect with fetch
 // fetch API 
@@ -23,33 +27,43 @@ return (
 
  {/* Use query hooks and probably need at least one mutations with appolo server */}
 
-<div className="ui four column relaxed grid">
+
   {/* map function */}
-  {/* <div><Image size="medium" src='../bf2042.jpg' /></div>  */}
-  <div className="four wide column"></div>
-  <div className="four wide column"></div>
-  <div className="four wide column"></div>
-  <div className="four wide column"></div>
-  <div className="four wide column"></div>
-  <div className="four wide column"></div>
-  <div className="four wide column"></div>
-  <div className="four wide column"></div>
+ 
+  <div class="ui four column divided relaxed grid">
+  <div class="row">
+    <div class="column ui small images">
+      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/> </p>
+    </div>
+    <div class="column ui small images">
+      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+    </div>
+    <div class="column ui small images">
+      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+    </div>
+    <div class="column ui small images">
+      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column ui small images">
+      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+    </div>
+    <div class="column ui small images">
+      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+    </div>
+    <div class="column ui small images">
+      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+    </div>
+    <div class="column ui small images">
+      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+    </div>
+  </div>
 </div>
 
-
-{/* import { Grid } from 'semantic-ui-react' */}
-
-{/* const ButtonExample = () => ( */}
-  <Grid>
-    <Grid.Column>
-      
-      <p>Content lives here</p>
-      <p>Content lives here</p>
-      <p>Content lives here</p>
-    </Grid.Column>
-  </Grid>
-);
     </section>
+
+    
     
   );
 }
