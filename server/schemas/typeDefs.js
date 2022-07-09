@@ -33,7 +33,7 @@ const typeDefs = gql`
         firstName: String
         lastName: String
         email: String
-        cart: [Cart]
+        carts: [Cart]
     }
 
     type Auth {
