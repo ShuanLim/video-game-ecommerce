@@ -12,13 +12,13 @@ return (
   <div class="ui four column divided relaxed grid">
   <div class="row">
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/> </p>
+      <p><img src="halo4.png" className='small images' alt='Mario Brother'/> </p>
     </div>
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="bf2042cover.png" className='small images' alt='Mario Brother'/></p>
     </div>
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="godsofwar.png" className='small images' alt='Mario Brother'/></p>
     </div>
     <div class="column ui small images">
       <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>

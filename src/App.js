@@ -15,13 +15,13 @@ function App() {
   return (
     <div className="App">
       <Nav></Nav>
-       
+      <sale></sale>
       <Routes>
         <Route path="/login" element={<div>Login</div>} exact />
         <Route path="/" element={<div><Header/><Body/></div>} exact />
         <Route path="/signup" element={<div>Signup</div>} exact />
         <Route path="/curated" element={<div>Curated</div>} exact />
-        <Route path="/sale" element={<div>Sale</div>} exact />
+        <Route path="/sale" element={<div><Header/><Sale/></div>} exact />
         
       </Routes>
       <sale></sale>
