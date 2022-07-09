@@ -7,16 +7,19 @@ const navbar= () =>{
 
 <div>
 <li>
-  <Link to="/">Login</Link>
+  <Link to="/">Games</Link>
 </li>
 <li>
-  <Link to="/cats">Create Account</Link>
+  <Link to="/login">Login</Link>
 </li>
 <li>
-  <Link to="/sheeps">Games</Link>
+  <Link to="/createAccount">Create Account</Link>
 </li>
 <li>
-  <Link to="/goats">Search</Link>
+  <Link to="/sale">Sale</Link>
+</li>
+<li>
+  <Link to="/curated">Curated</Link>
 </li>
 </div>
 );

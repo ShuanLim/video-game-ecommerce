@@ -11,9 +11,9 @@
   background-color: blue;
 } */
 
-/* header {
+header {
   background-color: chocolate;
-} */
+}
 
 .App-header {
   background-color: #0d1932;
@@ -27,17 +27,24 @@
 }
 
 .App-link {
-  color: #0e5164;
+  color: rgb(49, 49, 222);
 }
 
+.h2 {
+  
+}
 
 .grid div {
-  background-color: rgb(132, 161, 210);
+  background-color: rgb(178, 200, 237);
   border: 20px;
   margin: 20px;
   padding: 10px;
 }
 
  body {
-  background-color: rgb(201, 214, 222);
+  background-color: rgb(158, 200, 227);
+ }
+
+ body {
+  color: rgb(49, 49, 222);
  }
