@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: hsl(239, 60%, 29%);
 }
 
 .App-logo {
@@ -8,7 +9,7 @@
 }
 
 /* .header {
-  background-color: blue;
+  background: blue;
 } */
 
 header {
@@ -27,7 +28,7 @@ header {
 }
 
 .App-link {
-  color: rgb(49, 49, 222);
+  color: rgb(222, 49, 159);
 }
 
 .h2 {
@@ -35,16 +36,21 @@ header {
 }
 
 .grid div {
-  background-color: rgb(178, 200, 237);
+  background-color:hsl(239, 60%, 29%);
   border: 20px;
   margin: 20px;
   padding: 10px;
 }
 
  body {
-  background-color: rgb(158, 200, 227);
+  background: white;
  }
 
  body {
-  color: rgb(49, 49, 222);
+  color: rgb(248, 248, 253);
+  background-color: rgb(14, 20, 76);
+ }
+
+.navbar {
+  background-color: black;
  }

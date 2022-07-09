@@ -1,41 +1,32 @@
 
 // import 'semantic-ui-css/semantic.min.css'
+import './App.css';
 import Header from './Components/Header';
 import Nav from './Components/Nav';
-import './App.css';
 import Body from './Components/Body';
 import Footer from './Components/Footer';
+import Sale from './Components/Sale';
 import {
-  BrowserRouter as Router,
-  Switch,
   Route,
-  Link,
   Routes
 } from "react-router-dom";
 
-
 function App() {
   return (
-
     <div className="App">
-      <div className="ui secondary pointing menu">
-
-<Link className='link' to="/">Games</Link>
-<Link className='link' to="/dashboard">Login</Link>
-<Link className='link' to="/createAccount">Create Account</Link>
-<Link className='link' to="/sale">Sale</Link>
-<Link className='link' to="/curated">Curated</Link>
-
-</div>
-      {/* <Nav></Nav> */}
-      <Routes>
+      <Nav></Nav>
        
-        <Route path="/dashboard" element={Header} exact />
-        <Route path="/" element={Body} exact />
+      <Routes>
+        <Route path="/login" element={<div>Login</div>} exact />
+        <Route path="/" element={<div><Header/><Body/></div>} exact />
+        <Route path="/signup" element={<div>Signup</div>} exact />
+        <Route path="/curated" element={<div>Curated</div>} exact />
+        <Route path="/sale" element={<div>Sale</div>} exact />
+        
       </Routes>
-      {/* <Footer></Footer> */}
+      <sale></sale>
+      <Footer></Footer>
     </div>
-   
   );
 }
 
