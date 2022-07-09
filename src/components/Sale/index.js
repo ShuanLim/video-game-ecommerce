@@ -12,36 +12,36 @@ return (
   <div class="ui four column divided relaxed grid">
   <div class="row">
     <div class="column ui small images">
-      <p><img src="halo4.png" className='small images' alt='Mario Brother'/> </p>
+      <p><img src="spaceinvaders.png" className='small images' alt='Mario Brother'/> </p>
     </div>
     <div class="column ui small images">
-      <p><img src="bf2042cover.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="pacman.png" className='small images' alt='Mario Brother'/></p>
     </div>
     <div class="column ui small images">
-      <p><img src="godsofwar.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="fallout3.png" className='small images' alt='Mario Brother'/></p>
     </div>
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="tempest.png" className='small images' alt='Mario Brother'/></p>
     </div>
   </div>
   <div>
-        <h2 style={{textAlign: "center"}}>Best Deals!</h2>
+        <h2 style={{textAlign: "center"}}>Gotta play 'em all!</h2>
         <p style={{textAlign: "center"}}>
-       Don't wait Buy now!
+       Buy two games and get free shipping
         </p>
       </div>
   <div class="row">
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="legostarwars.png" className='small images' alt='Mario Brother'/></p>
     </div>
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="borderlands3.png" className='small images' alt='Mario Brother'/></p>
     </div>
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="pikman.png" className='small images' alt='Mario Brother'/></p>
     </div>
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="mariogalaxy.png" className='small images' alt='Mario Brother'/></p>
     </div>
   </div>
 </div>

@@ -33,36 +33,36 @@ return (
   <div class="ui four column divided relaxed grid">
   <div class="row">
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/> </p>
+      <p><img src="farcry.png" className='small images' alt='Mario Brother'/> </p>
     </div>
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="madden2002.png" className='small images' alt='Mario Brother'/></p>
     </div>
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="sonicforces.png" className='small images' alt='Mario Brother'/></p>
     </div>
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="zelda.png" className='small images' alt='Mario Brother'/></p>
     </div>
   </div>
   <div>
-        <h2 style={{textAlign: "center"}}>Best Deals!</h2>
+        <h2 style={{textAlign: "center"}}>Hottest Deals!</h2>
         <p style={{textAlign: "center"}}>
-       Don't wait Buy now!
+       Don't wait buy now
         </p>
       </div>
   <div class="row">
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="cod.png" className='small images' alt='Mario Brother'/></p>
     </div>
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="xmen.png" className='small images' alt='Mario Brother'/></p>
     </div>
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="reddead.png" className='small images' alt='Mario Brother'/></p>
     </div>
     <div class="column ui small images">
-      <p><img src="mariobro.png" className='small images' alt='Mario Brother'/></p>
+      <p><img src="ghostbusters.png" className='small images' alt='Mario Brother'/></p>
     </div>
   </div>
 </div>
