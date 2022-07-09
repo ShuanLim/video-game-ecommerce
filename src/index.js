@@ -6,12 +6,20 @@ import reportWebVitals from './reportWebVitals';
 // import 'semantic-ui-css/semantic.min.css'
 // import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  BrowserRouter
+} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode> 
+    <BrowserRouter> 
     <App />,
-    
+    </BrowserRouter>
   </React.StrictMode>
 );
 
