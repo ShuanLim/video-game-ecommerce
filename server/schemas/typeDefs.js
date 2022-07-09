@@ -3,7 +3,7 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
     type Genre {
         _id: ID
-        genreName: string
+        genreName: String
     }
 
     type Platform {
@@ -47,6 +47,8 @@ const typeDefs = gql`
 
     type Query {
         genres: [Genre]
+        games(genre: ID, name: String): [Game]
+        game(_id: ID!): Game
         user: User
         cart(_id: ID!): Cart
         checkout(games: [ID]!): Checkout
@@ -56,6 +58,8 @@ const typeDefs = gql`
         addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
         addCart(games: [ID]!): Cart
+        updateUser(fistName: String, lastName: String, email: String, password: String): User
+        updateGame(_id: ID!, quantity: Int!): Game
     }
 `;
 

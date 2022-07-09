@@ -81,7 +81,7 @@ const resolvers = {
         updateGame: async (parent, { _id, quantity }) => {
             const decrement = Math.abs(quantity) * -1;
       
-            return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+            return await Game.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
         },
         addCart: async (parent, { games }, context) => {
             console.log(context);

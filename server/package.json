@@ -1,4 +1,12 @@
 {
+  "name": "mern-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node config/seeds.js"
+  },
   "dependencies": {
     "apollo-server-express": "^3.9.0",
     "bcrypt": "^5.0.1",

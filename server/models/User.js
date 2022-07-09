@@ -3,7 +3,7 @@ const { Schema, model } = require('mongoose');
 // Declare and import bcrypt
 const bcrypt = require('bcrypt');
 // Import schema from Cart.js
-const bookSchema = require('./Cart');
+const Cart = require('./Cart');
 // Create user schema
 const userSchema = new Schema(
   {
@@ -27,7 +27,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    cart: [Cart.schema]
+    carts: [Cart.schema]
   },
   // Set this to use virtual below
   {
