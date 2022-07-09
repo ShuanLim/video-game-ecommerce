@@ -1,11 +1,11 @@
 
 // import 'semantic-ui-css/semantic.min.css'
 import './App.css';
-import Header from './Components/Header';
-import Nav from './Components/Nav';
-import Body from './Components/Body';
-import Footer from './Components/Footer';
-import Sale from './Components/Sale';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import Body from './components/Body';
+import Footer from './components/Footer';
+import Sale from './components/Sale';
 import {
   Route,
   Routes
