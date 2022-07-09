@@ -1,23 +1,25 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Grid } from 'semantic-ui-react';
 
 
 
 function Body() {
-  // USE state with array 
-
+  const [games, setGames] = useState ([]) 
+    // USE state with array 
+  useEffect(() => {
+    fetch('https://api.rawg.io/api/games?key=d0d0cd073e5646b799a3f88ec3baee61&page=2&search=call-of-duty')
+    .then(response => response.json()) 
+    .then (data =>       
+      {
+        console.log(data);
+        setGames(data.results)
+      });
+  }, [])
   return (
     <section>
 
 
-      {/* // USe effect with fetch
-// fetch API 
-// setting state array value to what is rturend from the fetch */}
 
-      {/* Use query hooks and probably need at least one mutations with appolo server */}
-
-
-      {/* map function */}
 
       <div class="ui four column divided relaxed grid">
         <div class="row">
