@@ -4,6 +4,10 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
+        users: async() => {
+          return User.find()
+            .select('-__v -password');
+        },
         user: async (parent, args, context) => {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id }).select('-__v -password');
@@ -16,11 +20,18 @@ const resolvers = {
         genres: async () => {
             return await Genre.find();
         },
+        platforms: async () => {
+          return await Platform.find();
+        },
         games: async (parent, { genre, name }) => {
             const params = {};
       
             if (genre) {
               params.genre = genre;
+            }
+
+            if (platform) {
+              params.platform = platform
             }
       
             if (name) {

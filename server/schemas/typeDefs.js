@@ -47,9 +47,11 @@ const typeDefs = gql`
 
     type Query {
         genres: [Genre]
+        platforms: [Platform]
         games(genre: ID, name: String): [Game]
         game(_id: ID!): Game
         user: User
+        users: [User]
         cart(_id: ID!): Cart
         checkout(games: [ID]!): Checkout
     }
