@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+
+// import 'semantic-ui-css/semantic.min.css'
 import './App.css';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import Body from './components/Body';
+import Footer from './components/Footer';
+import Sale from './components/Sale';
+import {
+  Route,
+  Routes
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav></Nav>
+      <sale></sale>
+      <Routes>
+        <Route path="/login" element={<div>Login</div>} exact />
+        <Route path="/" element={<div><Header/><Body/></div>} exact />
+        <Route path="/signup" element={<div>Signup</div>} exact />
+        <Route path="/curated" element={<div>Curated</div>} exact />
+        <Route path="/sale" element={<div><Header/><Sale/></div>} exact />
+        
+      </Routes>
+      <sale></sale>
+      <Footer></Footer>
     </div>
   );
 }
