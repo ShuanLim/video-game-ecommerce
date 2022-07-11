@@ -12,7 +12,7 @@ const resolvers = {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id }).select('-__v -password');
     
-              return user;
+              return userData;
             }
       
             throw new AuthenticationError('Not logged in');
@@ -23,7 +23,7 @@ const resolvers = {
         platforms: async () => {
           return await Platform.find();
         },
-        games: async (parent, { genre, name }) => {
+        games: async (parent, { genre, platform, name }) => {
             const params = {};
       
             if (genre) {
@@ -31,7 +31,7 @@ const resolvers = {
             }
 
             if (platform) {
-              params.platform = platform
+              params.platform = platform;
             }
       
             if (name) {
@@ -40,15 +40,20 @@ const resolvers = {
               };
             }
       
-            return await Game.find(params).populate('genre');
+            return await Game.find(params).populate('genre').populate('platform');
         },
         game: async (parent, { _id }) => {
-            return await Game.findById(_id).populate('genre');
+            return await Game.findById(_id).populate('genre').populate('platform');
+        },
+        // Add carts query
+        carts: async () => {
+          return await Cart.find().populate("game");
         },
         cart: async (parent, { _id }, context) => {
             if (context.user) {
               const user = await User.findById(context.user._id).populate({
                 path: 'carts.games',
+                populate: 'platform', // Populate with platform data
                 populate: 'genre'
               });
       
@@ -57,6 +62,38 @@ const resolvers = {
       
             throw new AuthenticationError('Not logged in');
         },
+        // Add checkout query
+        checkout: async (parent, args, context) => {
+          const cart = new Cart({ games: args.games });
+          const { games } = await cart.populate('games');
+          const line_items = [];
+          for (let i = 0; i < games.length; i++) {
+            // Generate game id
+            const game = await stripe.games.create({
+              gameName: games[i].gameName,
+              description: games[i].description
+            });
+            // Generate price id using the game id
+            const price = await stripe.prices.create({
+              game: game.id,
+              unit_amount: games[i].price * 100,
+              currency: 'usd',
+            });
+            // Add price id to the line items array
+            line_items.push({
+              price: price.id,
+              quantity: 1
+            });
+          }
+          const session = await stripe.checkout.sessions.create({
+            payment_method_types: ['card'],
+            line_items,
+            mode: 'payment',
+            success_url: 'https://example.com/success?session_id={CHECKOUT_SESSION_ID}',
+            cancel_url: 'https://example.com/cancel'
+          });
+          return { session: session.id };
+        }
     },
     Mutation: {
         addUser: async (parent, args) => {
@@ -72,7 +109,7 @@ const resolvers = {
                 throw new AuthenticationError('Incorrect credentials');
             }
 
-            const correctPW = await user.isCorrectPassword(password);
+            const correctPw = await user.isCorrectPassword(password);
 
             if (!correctPw) {
                 throw new AuthenticationError('Incorrect credentials');

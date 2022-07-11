@@ -52,6 +52,7 @@ const typeDefs = gql`
         game(_id: ID!): Game
         user: User
         users: [User]
+        carts: [Cart]
         cart(_id: ID!): Cart
         checkout(games: [ID]!): Checkout
     }
