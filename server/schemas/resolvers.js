@@ -53,8 +53,7 @@ const resolvers = {
             if (context.user) {
               const user = await User.findById(context.user._id).populate({
                 path: 'carts.games',
-                populate: 'platform', // Populate with platform data
-                populate: 'genre'
+                populate: 'platform' // Populate with platform data
               });
       
               return user.carts.id(_id);
