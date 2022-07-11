@@ -6,12 +6,18 @@ const resolvers = {
     Query: {
         users: async() => {
           return User.find()
-            .select('-__v -password');
+            //.select('-__v -password');
+            .populate({
+              path: 'carts.games',
+              populate: 'genre platform'})
         },
         user: async (parent, args, context) => {
             if (context.user) {
-                const userData = await User.findOne({ _id: context.user._id }).select('-__v -password');
-    
+                const userData = await User.findOne({ _id: context.user._id })
+                //.select('-__v -password');
+                .populate({
+                  path: 'carts.games',
+                  populate: 'genre platform'})
               return userData;
             }
       
@@ -98,7 +104,6 @@ const resolvers = {
         addUser: async (parent, args) => {
             const user = await User.create(args);
             const token = signToken(user);
-
             return { token, user };
         },
         login: async (parent, { email, password }) => {
@@ -120,7 +125,10 @@ const resolvers = {
         },
         updateUser: async (parent, args, context) => {
             if (context.user) {
-              return await User.findByIdAndUpdate(context.user._id, args, { new: true });
+              return await User.findByIdAndUpdate(context.user._id, args, { new: true })
+              .populate({
+                path: 'carts.games',
+                populate: 'genre platform'});
             }
       
             throw new AuthenticationError('Not logged in');
