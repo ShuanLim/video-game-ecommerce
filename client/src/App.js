@@ -6,7 +6,8 @@ import Nav from './components/Nav';
 import Body from './components/Body';
 import Footer from './components/Footer';
 import Sale from './components/Sale';
-// import { StoreProvider } from './utils/GlobalState';
+import { StoreProvider } from './utils/GlobalState';
+import Cart  from "./components/Cart";
 import {
   Route,
   Routes
@@ -14,21 +15,25 @@ import {
 
 function App() {
   return (
+   
+      
     <div className="App">
       <Nav></Nav>
       <sale></sale>
-      <Routes>
-      {/* <StoreProvider> */}
+      <StoreProvider>
+      <Routes>      
         <Route path="/login" element={<div>Login</div>} exact />
-        <Route path="/" element={<div><Header/><Body/></div>} exact />
+        <Route path="/" element={<div><Header/><Body/><Cart></Cart></div>} exact />
         <Route path="/signup" element={<div>Signup</div>} exact />
         <Route path="/curated" element={<div>Curated</div>} exact />
         <Route path="/sale" element={<div><Header/><Sale/></div>} exact />
-       {/* </StoreProvider> */}
+      
       </Routes>
+      </StoreProvider>
       <sale></sale>
       <Footer></Footer>
     </div>
+     
   );
 }
 
