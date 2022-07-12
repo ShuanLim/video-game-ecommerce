@@ -1,18 +1,24 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Game, Genre, Platform, Cart } = require('../models');
 const { signToken } = require('../utils/auth');
-
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 const resolvers = {
     Query: {
         users: async() => {
           return User.find()
-            .select('-__v -password');
+            //.select('-__v -password');
+            .populate({
+              path: 'carts.games',
+              populate: 'genre platform'})
         },
         user: async (parent, args, context) => {
             if (context.user) {
-                const userData = await User.findOne({ _id: context.user._id }).select('-__v -password');
-    
-              return user;
+                const userData = await User.findOne({ _id: context.user._id })
+                //.select('-__v -password');
+                .populate({
+                  path: 'carts.games',
+                  populate: 'genre platform'})
+              return userData;
             }
       
             throw new AuthenticationError('Not logged in');
@@ -23,7 +29,7 @@ const resolvers = {
         platforms: async () => {
           return await Platform.find();
         },
-        games: async (parent, { genre, name }) => {
+        games: async (parent, { genre, platform, name }) => {
             const params = {};
       
             if (genre) {
@@ -31,7 +37,7 @@ const resolvers = {
             }
 
             if (platform) {
-              params.platform = platform
+              params.platform = platform;
             }
       
             if (name) {
@@ -40,16 +46,20 @@ const resolvers = {
               };
             }
       
-            return await Game.find(params).populate('genre');
+            return await Game.find(params).populate('genre').populate('platform');
         },
         game: async (parent, { _id }) => {
-            return await Game.findById(_id).populate('genre');
+            return await Game.findById(_id).populate('genre').populate('platform');
+        },
+        // Add carts query
+        carts: async () => {
+          return await Cart.find().populate("game");
         },
         cart: async (parent, { _id }, context) => {
             if (context.user) {
               const user = await User.findById(context.user._id).populate({
                 path: 'carts.games',
-                populate: 'genre'
+                populate: 'platform' // Populate with platform data
               });
       
               return user.carts.id(_id);
@@ -57,12 +67,43 @@ const resolvers = {
       
             throw new AuthenticationError('Not logged in');
         },
+        // Add checkout query
+        checkout: async (parent, args, context) => {
+          const cart = new Cart({ games: args.games });
+          const { games } = await cart.populate('games');
+          const line_items = [];
+          for (let i = 0; i < games.length; i++) {
+            // Generate game id
+            const game = await stripe.games.create({
+              gameName: games[i].gameName,
+              description: games[i].description
+            });
+            // Generate price id using the game id
+            const price = await stripe.prices.create({
+              game: game.id,
+              unit_amount: games[i].price * 100,
+              currency: 'usd',
+            });
+            // Add price id to the line items array
+            line_items.push({
+              price: price.id,
+              quantity: 1
+            });
+          }
+          const session = await stripe.checkout.sessions.create({
+            payment_method_types: ['card'],
+            line_items,
+            mode: 'payment',
+            success_url: 'https://example.com/success?session_id={CHECKOUT_SESSION_ID}',
+            cancel_url: 'https://example.com/cancel'
+          });
+          return { session: session.id };
+        }
     },
     Mutation: {
         addUser: async (parent, args) => {
             const user = await User.create(args);
             const token = signToken(user);
-
             return { token, user };
         },
         login: async (parent, { email, password }) => {
@@ -72,7 +113,7 @@ const resolvers = {
                 throw new AuthenticationError('Incorrect credentials');
             }
 
-            const correctPW = await user.isCorrectPassword(password);
+            const correctPw = await user.isCorrectPassword(password);
 
             if (!correctPw) {
                 throw new AuthenticationError('Incorrect credentials');
@@ -84,7 +125,10 @@ const resolvers = {
         },
         updateUser: async (parent, args, context) => {
             if (context.user) {
-              return await User.findByIdAndUpdate(context.user._id, args, { new: true });
+              return await User.findByIdAndUpdate(context.user._id, args, { new: true })
+              .populate({
+                path: 'carts.games',
+                populate: 'genre platform'});
             }
       
             throw new AuthenticationError('Not logged in');
