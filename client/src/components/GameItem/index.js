@@ -1,23 +1,26 @@
+/* -------------------------------- */
+/* Project  : Video Game E-Commerce */
+/* File     : GameItem/index.js     */
+/* Team     : Coders of Hyrule      */
+/* Date     : 07/09/2022            */
+/* Modified : 07/12/2022            */
+/* -------------------------------- */
 import React from "react";
 import { Link } from "react-router-dom";
 import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
-
-function ProductItem(item) {
+function GameItem(item) {
   const [state, dispatch] = useStoreContext();
-
   const {
     image,
-    name,
+    gameName,
     _id,
     price,
     quantity
   } = item;
-
   const { cart } = state
-
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === _id)
     if (itemInCart) {
@@ -38,15 +41,14 @@ function ProductItem(item) {
       idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
     }
   }
-
   return (
     <div className="card px-1 py-1">
       <Link to={`/products/${_id}`}>
         <img
-          alt={name}
+          alt={gameName}
           src={`/images/${image}`}
         />
-        <p>{name}</p>
+        <p>{gameName}</p>
       </Link>
       <div>
         <div>{quantity} {pluralize("item", quantity)} in stock</div>
@@ -56,5 +58,4 @@ function ProductItem(item) {
     </div>
   );
 }
-
-export default ProductItem;
+export default GameItem;
