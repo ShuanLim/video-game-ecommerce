@@ -33,7 +33,8 @@ import Signup from './pages/Signup';
 import Nav from './components/Nav';
 // Import store
 import { StoreProvider } from './utils/GlobalState';
-//import Cart  from "./components/Cart";
+// Import Cart
+import Cart  from "./components/Cart";
 // Create link to database
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -66,6 +67,7 @@ function App() {
               <Route path="/games/:id" element={<Detail />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/orderHistory" element={<Cart />} />
             </Routes>
           </StoreProvider>
         </div>

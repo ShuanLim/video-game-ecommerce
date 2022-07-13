@@ -1,3 +1,2 @@
-<Route path="/signup" element={<Signup />} />
 <Route path="/orderHistory" element={<Cart />} />
 <Route path="*" element={<NoMatch />} />
