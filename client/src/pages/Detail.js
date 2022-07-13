@@ -1,56 +1,62 @@
+/* -------------------------------- */
+/* Project  : Video Game E-Commerce */
+/* File     : Detail.js             */
+/* Team     : Coders of Hyrule      */
+/* Date     : 07/12/2022            */
+/* Modified : 07/12/2022            */
+/* -------------------------------- */
+// Import react module
 import React, { useEffect, useState } from 'react';
+// Import router dom
 import { Link, useParams } from 'react-router-dom';
+// Import apollo client
 import { useQuery } from '@apollo/client';
-
-import Cart from '../components/Cart';
+// Import store context
 import { useStoreContext } from '../utils/GlobalState';
-import {
-  REMOVE_FROM_CART,
-  UPDATE_CART_QUANTITY,
-  ADD_TO_CART,
-  UPDATE_PRODUCTS,
-} from '../utils/actions';
-import { QUERY_PRODUCTS } from '../utils/queries';
+// Import update, insert and delete methods
+import {REMOVE_FROM_CART, UPDATE_CART_QUANTITY, ADD_TO_CART, UPDATE_GAMES} from '../utils/actions';
+// Import query games
+import { QUERY_GAMES } from '../utils/queries';
+// Import indexed database
 import { idbPromise } from '../utils/helpers';
+// Import Cart
+import Cart from '../components/Cart';
+// Import loading image
 import spinner from '../assets/spinner.gif';
-
+// Function to show game detail
 function Detail() {
+  // Store query game
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
-
-  const [currentProduct, setCurrentProduct] = useState({});
-
-  const { loading, data } = useQuery(QUERY_PRODUCTS);
-
-  const { products, cart } = state;
-
+  const [currentGame, setCurrentGame] = useState({});
+  const { loading, data } = useQuery(QUERY_GAMES);
+  const { games, cart } = state;
   useEffect(() => {
-    // already in global store
-    if (products.length) {
-      setCurrentProduct(products.find((product) => product._id === id));
+    // Already in global store
+    if (games.length) {
+      setCurrentGame(games.find((game) => game._id === id));
     }
-    // retrieved from server
+    // Retrieved from server
     else if (data) {
       dispatch({
-        type: UPDATE_PRODUCTS,
-        products: data.products,
+        type: UPDATE_GAMES,
+        games: data.games,
       });
-
-      data.products.forEach((product) => {
-        idbPromise('products', 'put', product);
+      data.games.forEach((game) => {
+        idbPromise('games', 'put', game);
       });
     }
-    // get cache from idb
+    // Get cache from idb
     else if (!loading) {
-      idbPromise('products', 'get').then((indexedProducts) => {
+      idbPromise('games', 'get').then((indexedGames) => {
         dispatch({
-          type: UPDATE_PRODUCTS,
-          products: indexedProducts,
+          type: UPDATE_GAMES,
+          games: indexedGames,
         });
       });
     }
-  }, [products, data, loading, dispatch, id]);
-
+  }, [games, data, loading, dispatch, id]);
+  // Method to add a game to cart
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id);
     if (itemInCart) {
@@ -66,36 +72,32 @@ function Detail() {
     } else {
       dispatch({
         type: ADD_TO_CART,
-        product: { ...currentProduct, purchaseQuantity: 1 },
+        game: { ...currentGame, purchaseQuantity: 1 },
       });
-      idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
+      idbPromise('cart', 'put', { ...currentGame, purchaseQuantity: 1 });
     }
   };
-
+  // Method to delete a game from cart
   const removeFromCart = () => {
     dispatch({
       type: REMOVE_FROM_CART,
-      _id: currentProduct._id,
+      _id: currentGame._id,
     });
-
-    idbPromise('cart', 'delete', { ...currentProduct });
+    idbPromise('cart', 'delete', { ...currentGame });
   };
-
+  // Display game detail
   return (
     <>
-      {currentProduct && cart ? (
+      {currentGame && cart ? (
         <div className="container my-1">
-          <Link to="/">← Back to Products</Link>
-
-          <h2>{currentProduct.name}</h2>
-
-          <p>{currentProduct.description}</p>
-
+          <Link to="/">← Back to Games</Link>
+          <h2>{currentGame.gameName}</h2>
+          <p>{currentGame.description}</p>
           <p>
-            <strong>Price:</strong>${currentProduct.price}{' '}
+            <strong>Price:</strong>${currentGame.price}{' '}
             <button onClick={addToCart}>Add to Cart</button>
             <button
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
+              disabled={!cart.find((p) => p._id === currentGame._id)}
               onClick={removeFromCart}
             >
               Remove from Cart
@@ -103,8 +105,8 @@ function Detail() {
           </p>
 
           <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
+            src={`/images/${currentGame.image}`}
+            alt={currentGame.gameName}
           />
         </div>
       ) : null}
@@ -113,5 +115,5 @@ function Detail() {
     </>
   );
 }
-
+// Export Detail page
 export default Detail;

@@ -13,7 +13,7 @@
 } */
 
 header {
-  background-color: chocolate;
+  background-color: hsl(239, 60%, 29%);
 }
 
 .App-header {
@@ -53,4 +53,8 @@ header {
 
 .navbar {
   background-color: black;
+ }
+
+ a {
+  text-decoration: none;
  }

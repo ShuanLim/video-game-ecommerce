@@ -29,7 +29,7 @@ db.once('open', async () => {
         {
             gameName: 'Mario Brothers',
             description: "It's-a me, Mario!",
-            image: 'insert image here',
+            image: 'mariobro.png',
             price: '20',
             quantity: '10',
             platform: platforms[0]._id,
@@ -38,7 +38,7 @@ db.once('open', async () => {
         {
             gameName: 'Call of Duty',
             description: "Duty calls",
-            image: 'insert image here',
+            image: 'cod.png',
             price: '40',
             quantity: '15',
             platform: platforms[1]._id,
@@ -47,7 +47,7 @@ db.once('open', async () => {
         {
             gameName: 'Portal',
             description: "Insert cube joke",
-            image: 'insert image here',
+            image: 'tempest.png',
             price: '30',
             quantity: '5',
             platform: platforms[2]._id,
@@ -56,7 +56,7 @@ db.once('open', async () => {
         {
             gameName: 'FIFA 22',
             description: "Same as FIFA 21",
-            image: 'insert image here',
+            image: 'zelda.png',
             price: '60',
             quantity: '20',
             platform: platforms[3]._id,

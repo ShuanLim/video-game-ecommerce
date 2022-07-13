@@ -5,39 +5,46 @@
 /* Date     : 07/12/2022            */
 /* Modified : 07/12/2022            */
 /* -------------------------------- */
+// Import apollo client
 import { gql } from '@apollo/client';
-
-export const QUERY_PRODUCTS = gql`
-  query getProducts($category: ID) {
-    products(category: $category) {
+// Export query games
+export const QUERY_GAMES = gql`
+  query getGames($genre:ID, $platform: ID) {
+    games(genre: $genre, platform: $platform) {
       _id
-      name
+      gameName
       description
       price
       quantity
       image
-      category {
+      platform {
+        _id
+      }
+      genre {
         _id
       }
     }
   }
 `;
-
-export const QUERY_ALL_PRODUCTS = gql`
+// Export query all games
+export const QUERY_ALL_GAMES = gql`
   {
-    products {
+    games {
       _id
-      name
+      gameName
       description
       price
       quantity
-      category {
-        name
+      platform {
+        platformName
+      }
+      genre {
+        _id
       }
     }
   }
 `;
-
+// Export query platforms
 export const QUERY_PLATFORMS = gql`
   {
     platforms {
@@ -46,18 +53,18 @@ export const QUERY_PLATFORMS = gql`
     }
   }
 `;
-
+// Export query user
 export const QUERY_USER = gql`
   {
     user {
       firstName
       lastName
-      orders {
+      carts {
         _id
         purchaseDate
-        products {
+        games {
           _id
-          name
+          gameName
           description
           price
           quantity
