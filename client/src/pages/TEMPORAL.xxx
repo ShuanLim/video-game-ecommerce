@@ -1,2 +1,2 @@
-<Route path="/orderHistory" element={<Cart />} />
+
 <Route path="*" element={<NoMatch />} />

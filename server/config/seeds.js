@@ -1,5 +1,5 @@
 const db = require('./connection');
-const { User, Game, Genre, Platform } = require('../models');
+const { User, Game, Genre, Platform, Cart } = require('../models');
 
 db.once('open', async () => {
     await Genre.deleteMany();
@@ -88,6 +88,7 @@ db.once('open', async () => {
     });
 
     console.log('users seeded');
-
+    await Cart.deleteMany();
+    console.log('carts clean');
     process.exit();
 });
