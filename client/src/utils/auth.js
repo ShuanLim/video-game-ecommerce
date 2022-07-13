@@ -1,16 +1,20 @@
+/* -------------------------------- */
+/* Project  : Video Game E-Commerce */
+/* File     : auth.js               */
+/* Team     : Coders of Hyrule      */
+/* Date     : 07/12/2022            */
+/* Modified : 07/12/2022            */
+/* -------------------------------- */
 import decode from 'jwt-decode';
-
 class AuthService {
   getProfile() {
     return decode(this.getToken());
   }
-
   loggedIn() {
     // Checks if there is a saved token and it's still valid
     const token = this.getToken();
     return !!token && !this.isTokenExpired(token);
   }
-
   isTokenExpired(token) {
     try {
       const decoded = decode(token);
@@ -21,19 +25,16 @@ class AuthService {
       return false;
     }
   }
-
   getToken() {
     // Retrieves the user token from localStorage
     return localStorage.getItem('id_token');
   }
-
   login(idToken) {
     // Saves user token to localStorage
     localStorage.setItem('id_token', idToken);
 
     window.location.assign('/');
   }
-
   logout() {
     // Clear user token and profile data from localStorage
     localStorage.removeItem('id_token');
@@ -41,5 +42,5 @@ class AuthService {
     window.location.assign('/');
   }
 }
-
+// Export authorization method
 export default new AuthService();

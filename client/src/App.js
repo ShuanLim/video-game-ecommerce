@@ -20,8 +20,10 @@ import Home from './pages/Home';
 // Import detail page
 import Detail from './pages/Detail';
 //import NoMatch from './pages/NoMatch';
-//import Login from './pages/Login';
-//import Signup from './pages/Signup';
+// Import login page
+import Login from './pages/Login';
+// Import sign up
+import Signup from './pages/Signup';
 
 //import Header from './components/Header';
 //import Body from './components/Body';
@@ -62,7 +64,8 @@ function App() {
             <Routes>      
               <Route path="/" element={<Home />} />
               <Route path="/games/:id" element={<Detail />} />
-              
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
             </Routes>
           </StoreProvider>
         </div>
