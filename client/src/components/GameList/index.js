@@ -51,6 +51,7 @@ function GameList() {
     }
     return state.games.filter(game => game.platform._id === currentPlatform);
   }
+  console.log(state);
   return (
     <div className="my-2">
       <h2>Our Games:</h2>

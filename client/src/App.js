@@ -19,20 +19,16 @@ import Nav from './components/Nav';
 import Home from './pages/Home';
 // Import detail page
 import Detail from './pages/Detail';
-//import NoMatch from './pages/NoMatch';
 // Import login page
 import Login from './pages/Login';
 // Import sign up
 import Signup from './pages/Signup';
 // Import order history
 import OrderHistory from './pages/OrderHistory';
+// Import platform games page
+//import PlatformGames from './pages/PlatformGames';
 
-// Import Cart
-//import Cart  from "./components/Cart";
-
-//import Header from './components/Header';
-//import Body from './components/Body';
-//import Footer from './components/Footer';
+import Footer from './components/Footer';
 //import Sale from './components/Sale';
 //import 'semantic-ui-css/semantic.min.css'
 //import './App.css';
@@ -72,8 +68,10 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/orderHistory" element={<OrderHistory />} />
+              
             </Routes>
           </StoreProvider>
+          <Footer />
         </div>
       </Router>
     </ApolloProvider>
