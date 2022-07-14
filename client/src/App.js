@@ -3,7 +3,7 @@
 /* File     : App.js                */
 /* Team     : Coders of Hyrule      */
 /* Date     : 07/08/2022            */
-/* Modified : 07/12/2022            */
+/* Modified : 07/13/2022            */
 /* -------------------------------- */
 // Import react module
 import React from 'react';
@@ -13,27 +13,28 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {ApolloClient, InMemoryCache, ApolloProvider, createHttpLink} from '@apollo/client';
 // Import context
 import { setContext } from '@apollo/client/link/context';
-// import 'semantic-ui-css/semantic.min.css'
-//import './App.css';
+// Import navigation bar
+import Nav from './components/Nav';
 // Import home page
 import Home from './pages/Home';
 // Import detail page
 import Detail from './pages/Detail';
-//import NoMatch from './pages/NoMatch';
 // Import login page
 import Login from './pages/Login';
 // Import sign up
 import Signup from './pages/Signup';
+// Import order history
+import OrderHistory from './pages/OrderHistory';
+// Import platform games page
+//import PlatformGames from './pages/PlatformGames';
 
-//import Header from './components/Header';
-//import Body from './components/Body';
-//import Footer from './components/Footer';
+import Footer from './components/Footer';
 //import Sale from './components/Sale';
-// Import navigation bar
-import Nav from './components/Nav';
+//import 'semantic-ui-css/semantic.min.css'
+//import './App.css';
+
 // Import store
 import { StoreProvider } from './utils/GlobalState';
-//import Cart  from "./components/Cart";
 // Create link to database
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -66,8 +67,11 @@ function App() {
               <Route path="/games/:id" element={<Detail />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/orderHistory" element={<OrderHistory />} />
+              
             </Routes>
           </StoreProvider>
+          <Footer />
         </div>
       </Router>
     </ApolloProvider>
