@@ -11,7 +11,8 @@ db.once('open', async () => {
         { genreName: 'Sports' },
         { gameGenre: 'Simulation' },
         { gameGenre: 'Racing' },
-        { gameGenre: 'Fighting'}
+        { gameGenre: 'Fighting'},
+        { gameGenre: 'MMORPG'}
     ]);
 
     console.log('genres seeded');
@@ -237,13 +238,193 @@ db.once('open', async () => {
             genre: genres[6]._id
         },
         {
-            gameName: 'One Piece: Grand Battle',
+            gameName: 'Rampage',
             description: "Rampage is a 1986 arcade game by Bally Midway.[2] Players take control of a trio of gigantic monsters trying to survive against onslaughts of military forces. Each round is completed when a particular city is completely reduced to rubble.",
             image: 'nintendorampage.png',
             price: '19.99',
             quantity: '3',
             platform: platforms[0]._id,
             genre: genres[0]._id
+        },
+        {
+            gameName: 'Sonic: Lost World',
+            description: "Sonic Lost World is a platform game with action-adventure elements, in which the player controls Sonic the Hedgehog as he travels across the Lost Hex in order to rescue captured animals and stop the Deadly Six.",
+            image: 'nintendosoniclostworld.png',
+            price: '24.99',
+            quantity: '5',
+            platform: platforms[0]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: 'Nintendo World Cup',
+            description: "Eight students known as Atsushi, Genei, Hiroyuki, Kunio, Masa, Masahiro, Susumu and Takashi compete in a soccer tournament against 13 other high schools.",
+            image: 'nintendoworldcup.png',
+            price: '19.99',
+            quantity: '3',
+            platform: platforms[0]._id,
+            genre: genres[3]._id
+        },
+        {
+            gameName: 'Pac-Man Collection',
+            description: "Pac-Man Collection is a collection of Pac-Man games",
+            image: 'pacman.png',
+            price: '19.99',
+            quantity: '7',
+            platform: platforms[0]._id,
+            genre: genres[2]._id
+        },
+        {
+            gameName: 'Battlefield 2 Deluxe Edition',
+            description: "Battlefield 2 is a first-person shooter video game, developed by DICE and published by Electronic Arts for Microsoft Windows in June 2005 as the third game in the Battlefield series.",
+            image: 'pcbf2.png',
+            price: '29.99',
+            quantity: '5',
+            platform: platforms[2]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: 'Destiny 2',
+            description: "Destiny 2 is a free-to-play online-only multiplayer first-person shooter video game developed by Bungie.",
+            image: 'pcdestiny2.png',
+            price: '59.99',
+            quantity: '15',
+            platform: platforms[2]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: 'Halo: Combat Evolved',
+            description: "Halo: Combat Evolved is a 2001 first-person shooter science-fiction video game developed by Bungie Studios and the first game in the Halo series. It focuses on John-117 and the crew of the UNSC Pillar of Autumn who, fleeing from the Fall of Reach, stumble on the Forerunner Halo Installation 04, only to be forced into a desperate battle against the Covenant and the Flood.",
+            image: 'pcdoom3.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[2]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: 'Battlefield 4',
+            description: "Fueled by the next-generation power and fidelity of Frostbite™ 3, Battlefield 4 provides a visceral, dramatic experience unlike any other. Only in Battlefield can you demolish the buildings shielding your enemy. Only in Battlefield will you lead an assault from the back of a gun boat. Do more and be more by playing to your strengths and carving your own path to victory. In addition to its hallmark multiplayer, Battlefield 4 features an intense, dramatic, character-driven campaign that starts with the evacuation of American VIPs from Shanghai and follows your squad’s struggle to find its way home. Immerse yourself in the glorious chaos of all-out war, found only in Battlefield.",
+            image: 'pcbf4.png',
+            price: '34.99',
+            quantity: '10',
+            platform: platforms[2]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: 'Battlefield 1942',
+            description: "Battlefield 1942 (also known as BF1942) is the first installment in the Battlefield series and was developed by DICE. It was released for PC in 2002 and was later made the AIAS and IGN Game of the Year. ",
+            image: 'pcbf1942.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[2]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Doom: Collector's Edition",
+            description: "Developed by id software, the studio that pioneered the first-person shooter genre and created multiplayer Deathmatch, DOOM returns as a brutally fun and challenging modern-day shooter experience. Relentless demons, impossibly destructive guns, and fast, fluid movement provide the foundation for intense, first-person combat – whether you’re obliterating demon hordes through the depths of Hell in the single-player campaign, or competing against your friends in numerous multiplayer modes. Expand your gameplay experience using DOOM SnapMap game editor to easily create, play, and share your content with the world.",
+            image: 'pcdoomcollectorsedition.png',
+            price: '49.99',
+            quantity: '3',
+            platform: platforms[2]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Everquest",
+            description: "EverQuest is a 3D fantasy-themed massively multiplayer online role-playing game originally developed by Verant Interactive and 989 Studios for Windows PCs.",
+            image: 'pceverquest.png',
+            price: '19.99',
+            quantity: '3',
+            platform: platforms[2]._id,
+            genre: genres[7]._id
+        },
+        {
+            gameName: "Far Cry",
+            description: "Set on a mysterious tropical archipelago, the game follows Jack Carver, a former American special forces operative, as he searches for the female journalist, Valerie Constantine, who accompanied him to the islands but went missing after their boat was destroyed by mercenaries. As Jack explores the islands, he begins to discover the horrific genetic experiments being conducted on the local wildlife and must confront the mad scientist behind them.",
+            image: 'pcfarcry.png',
+            price: '19.99',
+            quantity: '5',
+            platform: platforms[2]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Far Cry 5",
+            description: "Far Cry comes to America in the latest installment of the award-winning franchise. Welcome to Hope County, Montana, land of the free and the brave but also home to a fanatical doomsday cult known as Eden’s Gate. Stand up to cult leader Joseph Seed, and his siblings, the Heralds, to spark the fires of resistance and liberate the besieged community.",
+            image: 'pcfarcry5.png',
+            price: '49.99',
+            quantity: '10',
+            platform: platforms[2]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Just Cause 2",
+            description: "Dive into an adrenaline-fuelled free-roaming adventure. As agent Rico Rodriguez, your orders are to find and kill your friend and mentor who has disappeared on the island paradise of Panau. There, you must cause maximum chaos by land, sea and air to shift the balance of power. With the unique grapple and parachute combo, BASE jump, hijack and create your own high-speed stunts. With 400 square miles of rugged terrain and hundreds of weapons and vehicles, Just Cause 2 defies gravity and belief.",
+            image: 'pcjustcause2.png',
+            price: '39.99',
+            quantity: '10',
+            platform: platforms[2]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Lego Star Wars",
+            description: "Lego Star Wars: The Video Game (sometimes simply called Lego Star Wars) is a Lego-themed, action-adventure video game based on the Lego Star Wars line of toys, and the first installment in the Lego video game franchise developed by Traveller's Tales, which would develop all future Lego titles from that point on.",
+            image: 'pclegostarwars.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[2]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "Mass Effect",
+            description: "As Commander Shepard, you lead an elite squad on a heroic, action-packed adventure throughout the galaxy. Discover the imminent danger from an ancient threat and battle the traitorous Saren and his deadly army to save civilization. The fate of all life depends on your actions!",
+            image: 'pcmasseffect.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[2]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "The Elder Scrolls 4: Oblivion",
+            description: "The Elder Scrolls IV: Oblivion® Game of the Year Edition presents one of the best RPGs of all time like never before. Step inside the most richly detailed and vibrant game-world ever created. With a powerful combination of freeform gameplay and unprecedented graphics, you can unravel the main quest at your own pace or explore the vast world and find your own challenges.",
+            image: 'pcoblivian.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[2]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "Red Dead Redemption",
+            description: "When federal agents threaten his family, former outlaw John Marston is sent across the American frontier to help bring the rule of law. Experience intense gun battles, dramatic train robberies, bounty hunting and duels during a time of violent change.",
+            image: 'pcreddeadredemption.png',
+            price: '39.99',
+            quantity: '10',
+            platform: platforms[2]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "Star Trek",
+            description: "Star Trek is a third-person action-adventure Star Trek video game. It was developed by Digital Extremes and co-published by Namco Bandai Games and Paramount Pictures in association with CBS Studios International.",
+            image: 'pcstartrek.png',
+            price: '34.99',
+            quantity: '10',
+            platform: platforms[2]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "World of Warcraft",
+            description: "Join thousands of mighty heroes in Azeroth, a world of magic and limitless adventure.",
+            image: 'pcwow.png',
+            price: '19.99',
+            quantity: '15',
+            platform: platforms[2]._id,
+            genre: genres[7]._id
+        },
+        {
+            gameName: "Pikmin",
+            description: "Pikmin is a real-time strategy and puzzle video game series created by Shigeru Miyamoto, and published by Nintendo",
+            image: 'pikman.png',
+            price: '19.99',
+            quantity: '7',
+            platform: platforms[2]._id,
+            genre: genres[2]._id
         },
     ]);
 
