@@ -426,6 +426,177 @@ db.once('open', async () => {
             platform: platforms[2]._id,
             genre: genres[2]._id
         },
+        {
+            gameName: "007 Legends",
+            description: "007 Legends is a first-person shooter video game featuring the character of British secret agent James Bond. It was developed by Eurocom and first released by Activision on October 2012",
+            image: 'playstation007legends.png',
+            price: '29.99',
+            quantity: '5',
+            platform: platforms[3]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "007 Racing",
+            description: "007 Racing is a 2000 racing video game developed by Eutechnyx and published by Electronic Arts for the PlayStation. This game marks the seventh appearance of Pierce Brosnan's James Bond; though like Tomorrow Never Dies and The World is Not Enough, the game includes his likeness but not his voice.",
+            image: 'playstation007racing.png',
+            price: '19.99',
+            quantity: '5',
+            platform: platforms[3]._id,
+            genre: genres[5]._id
+        },
+        {
+            gameName: "Bioshock",
+            description: "BioShock is a genetically enhanced, action-adventure, horror-themed first person shooter by Irrational Games. While exploring the underwater dystopia, Rapture, the player is urged to turn everything into a weapon: biologically modifying their own body with Plasmids, hacking devices and systems, upgrading their weapons, crafting new ammo variants, and experimenting with different battle techniques are all possible.",
+            image: 'playstationbioshock.png',
+            price: '29.99',
+            quantity: '10',
+            platform: platforms[3]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Cyberpunk 2077",
+            description: "Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality. You can customize your character’s cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.",
+            image: 'playstationcyberpunk2077.png',
+            price: '59.99',
+            quantity: '10',
+            platform: platforms[3]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "Fortnite",
+            description: "Fortnite is a free-to-play Battle Royale game with numerous game modes for every type of game player. Watch a concert, build an island or fight.",
+            image: 'playstationfortnite.png',
+            price: '19.99',
+            quantity: '20',
+            platform: platforms[3]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Frogger",
+            description: "Frogger, also called Frogger: He's Back!, is an action video game remake of Konami's 1981 arcade game of the same name.",
+            image: 'playstationfrogger.png',
+            price: '19.99',
+            quantity: '3',
+            platform: platforms[3]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "Hitman HD Trilogy",
+            description: "Hitman HD Trilogy is a HD remastering of Hitman 2: Silent Assassin, Hitman: Contracts and Hitman: Blood Money for the PS3 and Xbox 360.",
+            image: 'playstationhitmantrilogy.png',
+            price: '29.99',
+            quantity: '5',
+            platform: platforms[3]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "Justice League Heroes",
+            description: "Justice League Heroes is a 2006 console video game for the Xbox and PlayStation 2 platforms. It was developed by Snowblind Studios, published by Warner Bros. Interactive Entertainment in conjunction with DC Comics and was distributed in Europe by Eidos Interactive. Based on the long-running comic book series Justice League, it was written by comic book writer Dwayne McDuffie.[1] It uses the Snowblind Studios game engine.",
+            image: 'playstationjusticeleagueheroes.png',
+            price: '19.99',
+            quantity: '5',
+            platform: platforms[3]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "Killzone",
+            description: "Killzone is a first-person shooter, developed by Netherlands-based Guerrilla Games and released on 2 November 2004 in North America and 26 November 2004 in Europe.",
+            image: 'playstationkillzone.png',
+            price: '19.99',
+            quantity: '5',
+            platform: platforms[3]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Metro Redux",
+            description: "Metro Redux is the ultimate double game collection, including the definitive versions of both Metro 2033 and Metro: Last Light, each rebuilt in the latest and greatest iteration of the 4A Engine for next-gen consoles and PC.",
+            image: 'playstationmetroredux.png',
+            price: '49.99',
+            quantity: '10',
+            platform: platforms[3]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Mortal Kombat Armageddon",
+            description: "The fury of Mortal Kombat has brought the realms to the brink of total destruction. Every warrior has been summoned to this last epic battle, where survival depends on their ability to... FIGHT!",
+            image: 'playstationmortalkombatarmageddon.png',
+            price: '24.99',
+            quantity: '10',
+            platform: platforms[3]._id,
+            genre: genres[6]._id
+        },
+        {
+            gameName: "Shinobi",
+            description: "Shinobi is a 3D action-adventure video game developed by Overworks and published by Sega as part of the Shinobi series.",
+            image: 'playstationmortalkombatarmageddon.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[3]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "Spider-Man",
+            description: "Sony Interactive Entertainment, Insomniac Games, and Marvel have teamed up to create an authentic Spider-Man adventure. This isn’t the Spider-Man you’ve met or ever seen before. This is an experienced Peter Parker who’s more masterful at fighting big crime in Marvel's New York. At the same time, he’s struggling to balance his chaotic personal life and career while the fate of millions of New Yorkers rest upon his shoulders.",
+            image: 'playstationspiderman.png',
+            price: '39.99',
+            quantity: '10',
+            platform: platforms[3]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "The Incredibles",
+            description: "The Incredibles is an action-adventure video game based on Pixar's 2004 film of the same name and published by THQ.",
+            image: 'playstationtheincredibles.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[3]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "WWE 2K19",
+            description: "WWE 2K19 arrives as the latest entry to the flagship WWE video game franchise and features cover Superstar AJ Styles. WWE 2K19 will showcase a massive roster of popular WWE Superstars, Legends and Hall of Famers, as well as NXT favorites. Experience authentic WWE gameplay, extensive creation options, engaging match types, fan-favorite modes and much more!",
+            image: 'playstationW2k19.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[3]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "Wall-E",
+            description: "WALL-E follows the story of a small, sentient robot whose sole purpose is to clean up Earth's voluminous garbage. In the year 2700, mankind has left behind millions of tiny trash collectors to make the planet habitable again. Yet only WALL-E remains functional, dutifully performing his task while collecting an odd assortment of souvenirs. His uneventful life takes on new meaning when he encounters a sleek, shiny robot named EVE, sent by humans to monitor the clean-up progress.",
+            image: 'playstationwall-e.png',
+            price: '29.99',
+            quantity: '10',
+            platform: platforms[3]._id,
+            genre: genres[2]._id
+        },
+        {
+            gameName: "Watch Dogs",
+            description: "Watch_Dogs takes place in a fully simulated living city. Using Aiden's smartphone, you have real-time control over the city's infrastructure. Trap your enemy in a 30-car pileup by manipulating the traffic lights. Stop a train, and then board it to evade the authorities. Narrowly escape capture by quickly raising a drawbridge. Anything connected to the ctOS can become your weapon.",
+            image: 'playstationwatchdogs.png',
+            price: '39.99',
+            quantity: '10',
+            platform: platforms[3]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "X-Men Legends II: Rise of Apocalypse",
+            description: "X-Men Legends II: Rise of Apocalypse is an action role-playing game developed primarily by Raven Software and published by Activision. It is the follow up to 2004's X-Men Legends.",
+            image: 'playstationxmenlegends2.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[3]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "Sonic Forces",
+            description: "Sonic Forces is a 2017 platform video game developed by Sonic Team and published by Sega. Produced in commemoration of the 25th anniversary of the Sonic the Hedgehog franchise.",
+            image: 'sonicforces.png',
+            price: '34.99',
+            quantity: '10',
+            platform: platforms[3]._id,
+            genre: genres[0]._id
+        },
     ]);
 
     console.log('games seeded');
