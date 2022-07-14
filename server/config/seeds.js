@@ -409,15 +409,6 @@ db.once('open', async () => {
             genre: genres[7]._id
         },
         {
-            gameName: "Pikmin",
-            description: "Pikmin is a real-time strategy and puzzle video game series created by Shigeru Miyamoto, and published by Nintendo",
-            image: 'pikman.png',
-            price: '19.99',
-            quantity: '7',
-            platform: platforms[2]._id,
-            genre: genres[1]._id
-        },
-        {
             gameName: "Far Cry 5",
             description: "Far Cry comes to America in the latest installment of the award-winning franchise. Welcome to Hope County, Montana, land of the free and the brave but also home to a fanatical doomsday cult known as Eden’s Gate. Stand up to cult leader Joseph Seed, and his siblings, the Heralds, to spark the fires of resistance and liberate the besieged community.",
             image: 'pcfarcry5.png',
@@ -495,7 +486,7 @@ db.once('open', async () => {
             image: 'pikman.png',
             price: '19.99',
             quantity: '7',
-            platform: platforms[2]._id,
+            platform: platforms[0]._id,
             genre: genres[2]._id
         },
         {
@@ -504,7 +495,7 @@ db.once('open', async () => {
             image: 'playstation007legends.png',
             price: '29.99',
             quantity: '5',
-            platform: platforms[3]._id,
+            platform: platforms[2]._id,
             genre: genres[1]._id
         },
         {
@@ -558,7 +549,7 @@ db.once('open', async () => {
             image: 'playstationhitmantrilogy.png',
             price: '29.99',
             quantity: '5',
-            platform: platforms[3]._id,
+            platform: platforms[1]._id,
             genre: genres[0]._id
         },
         {
