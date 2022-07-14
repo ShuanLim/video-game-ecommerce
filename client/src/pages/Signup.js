@@ -45,9 +45,12 @@ function Signup(props) {
   // Show sign up page
   return (
     <div className="container my-1">
-      <Link to="/login">← Go to Login</Link>
-      <h2>Signup</h2>
-      <form className ="ui form" onSubmit={handleFormSubmit}>
+      {/* <Link to="/login">← Login</Link> */}
+      <div class ="ui very padded text container segment">
+      <h1 class="ui center aligned green inverted header">Sign up for your account</h1>
+      <div class="row">
+        <div class="ui four column centered grid">
+      <form className ="ui large form" onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2" >
           <label htmlFor="firstName">First Name:</label>
           <input
@@ -90,9 +93,13 @@ function Signup(props) {
           />
         </div>
         <div className="flex-row flex-end">
-          <button className="ui button"type="submit">Submit</button>
+          <button className="large fluid ui green basic button"type="submit">Sign up</button>
         </div>
+        
       </form>
+      </div>
+      </div>
+      </div>
     </div>
   );
 }
