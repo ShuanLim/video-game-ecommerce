@@ -75,11 +75,13 @@ function Login(props) {
                 <p className="error-text">The provided email or password is incorrect</p>
               </div>
               ) : null}
-              <div className="flex-row flex-end">
+              <div className="flex-row flex-end space-btn">
                 {/*<button type="submit">Submit</button>*/}
                 <button type="submit" className='large fluid ui green basic button'>Login</button>
               </div>
-              <Link to="/signup">Signup</Link>
+              <div className='log'>
+              <Link to="/signup">Instead Signup</Link>
+              </div>
             </form>
           </div>
         </div>

@@ -11,6 +11,8 @@ import React from 'react';
 import { Link } from "react-router-dom";
 // Import authorization
 import Auth from "../../utils/auth";
+// Import platfform options component
+import PlatformMenu from "../../components/PlatformMenu";
 // Function to show navbar
 function Nav() {
   function showNavigation() {
@@ -59,6 +61,7 @@ function Nav() {
       <nav>
         {showNavigation()}
       </nav>
+      <PlatformMenu />
     </header>
   );
 }

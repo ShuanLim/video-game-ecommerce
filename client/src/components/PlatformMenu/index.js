@@ -52,8 +52,7 @@ function PlatformMenu() {
   };
   // Show platforms menu
   return (
-    <div>
-      <h2>Filter by Platform:</h2>
+    <div className='prueba'>
       {platforms.map((item) => (
         <button key={item._id} onClick={() => { handleClick(item._id); }} >
           {item.platformName}

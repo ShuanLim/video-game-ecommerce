@@ -20,8 +20,8 @@ import { Link } from "react-router-dom";
 // Declares Home function
 const Home = () => {
   return (
-    <div className="container">
-      <PlatformMenu />
+    <div className="games-body">
+      
       {Auth.loggedIn() ? (
         <Cart />
       ) : (

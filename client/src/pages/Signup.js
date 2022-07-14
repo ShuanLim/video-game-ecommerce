@@ -92,11 +92,13 @@ function Signup(props) {
                   onChange={handleChange}
                 />
               </div>
-              <div className="flex-row flex-end">
+              <div className="flex-row flex-end space-btn">
                 {/*<button type="submit">Create</button>*/}
                 <button className="large fluid ui green basic button"type="submit">Sign up</button>
               </div>
-              <Link to="/login">Login</Link>
+              <div className='log'>
+              <Link to="/login">Instead Login</Link>
+              </div>
             </form>
           </div>
         </div>

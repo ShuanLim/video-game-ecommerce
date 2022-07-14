@@ -1,7 +1,6 @@
 :root {
-  --primary: #272f32;
   --xbox: #92f347;/*#F3A847;*/
-  --tertiary: #ffffff;
+  --links: #ffffff;
   --light: #ffffff;
   --dark: #272f32;
   --ps: #1961df;
@@ -21,7 +20,7 @@ body {
 
 body {
   /*background-color: #1a1a19;*/
-  background-image: url("assets/bg.jpg");
+  background-image: url("assets/bg-dark.jpg");
   margin: 0;
   padding: 0;
   font-family: "Play";
@@ -31,6 +30,13 @@ body {
   color: var(--light);
 }
 
+.games-body {
+  margin-top: 2%;
+  margin-inline: 3%;
+}
+.prueba {
+  padding-bottom: 1%;
+}
 ul {
   padding-left: 89%;
   padding-right: 1%;
@@ -48,8 +54,8 @@ li {
 }
 .login-games {
   color: red;
-  margin-top: 1%;
-  margin-left: 50%;
+  margin-top: 2%;
+  margin-left: 0%;
 }
 .title {
   padding-left: 2%;
@@ -101,7 +107,7 @@ p {
 }
 
 a {
-  color: var(--tertiary);
+  color: var(--links);
   text-decoration: none;
   font-weight: bold;
 }
@@ -112,8 +118,7 @@ a:hover {
 }
 
 header {
-  /*background: red;var(--primary);*/
-  background-image: url("assets/bg.gif");
+  background-image: url("assets/banner.gif");
 }
 
 header a {
@@ -154,7 +159,7 @@ span[role="img"] {
 
 form {
   width: 40%;
-  background-color: var(--ps);
+  background-color: var(--light);
 }
 
 input {
@@ -238,6 +243,19 @@ input:focus {
 
 .error-text {
   color: var(--nintendo);
+}
+
+.log{
+  margin-top: 10%;
+  background-color: var(--ps);
+}
+
+.log:hover{
+  background-color: var(--xbox);
+}
+
+.space-btn {
+  margin-block: 15%;
 }
 
 @media screen and (max-width: 768px) {
