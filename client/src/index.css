@@ -1,8 +1,8 @@
 :root {
-  --primary: #2dbe69;
+  --primary: #272f32;
   --secondary: #F3A847;
-  --tertiary: #B12704;
-  --light: #fafafa;
+  --tertiary: #ffffff;
+  --light: #ffffff;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
@@ -19,7 +19,7 @@ body {
 }
 
 body {
-  background-color: rgb(37, 37, 144);
+  background-color: #1a1a19;
   margin: 0;
   padding: 0;
   font-family: 'Karla', sans-serif;
