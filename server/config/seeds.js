@@ -597,6 +597,186 @@ db.once('open', async () => {
             platform: platforms[3]._id,
             genre: genres[0]._id
         },
+        {
+            gameName: "Avatar: The Game",
+            description: "James Cameron's Avatar: The Game is a 2009 third-person action video game based on James Cameron's 2009 film Avatar.",
+            image: 'xboxavatar.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[1]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "Battlefield Hardline",
+            description: "Be the law or break the law in Battlefield™ Hardline. This action-packed blockbuster combines intense signature multiplayer moments of Battlefield™ with an emotionally charged story and setting reminiscent of a modern television crime drama. In a visceral single-player campaign, you’ll play the role of Nick Mendoza, a young detective who embarks on a cross-country vendetta seeking revenge against once trusted partners on the force. Hunt criminals, raid vaults, and save hostages in new cop- and criminal-inspired multiplayer modes like Heist and Rescue.",
+            image: 'xboxbatllefieldhardline.png',
+            price: '39.99',
+            quantity: '10',
+            platform: platforms[1]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Bioshock Infinite",
+            description: "Indebted to the wrong people, with his life on the line, veteran of the U.S. Cavalry and now hired gun, Booker DeWitt has only one opportunity to wipe his slate clean. He must rescue Elizabeth, a mysterious girl imprisoned since childhood and locked up in the flying city of Columbia. Forced to trust one another, Booker and Elizabeth form a powerful bond during their daring escape. Together, they learn to harness an expanding arsenal of weapons and abilities, as they fight on zeppelins in the clouds, along high-speed Sky-Lines, and down in the streets of Columbia, all while surviving the threats of the air-city and uncovering its dark secret.",
+            image: 'xboxbioshockinfinite.png',
+            price: '49.99',
+            quantity: '10',
+            platform: platforms[1]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Duke Nukem Forever",
+            description: "Put on your shades and prepare to step into the boots of Duke Nukem, whose legend has reached epic proportions in the years since his last adventure. The alien hordes are invading and only Duke can save the world. Pig cops, alien shrink rays and enormous alien bosses can't stop our hero from accomplishing his goal: to save the world, save the babes and to be a bad-ass while doing it.",
+            image: 'xboxdukenukemforever.png',
+            price: '29.99',
+            quantity: '10',
+            platform: platforms[1]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Fallout New Vegas",
+            description: "As you battle your way across the heat-blasted Mojave Wasteland, the colossal Hoover Dam, and the neon drenched Vegas Strip, you’ll be introduced to a colorful cast of characters, power-hungry factions, special weapons, mutated creatures and much more. Choose sides in the upcoming war or declare “winner takes all” and crown yourself the King of New Vegas in this follow-up to the 2008 videogame of the year, Fallout 3.",
+            image: 'xboxfalloutlasvegas.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[1]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Fallout New Vegas",
+            description: "As you battle your way across the heat-blasted Mojave Wasteland, the colossal Hoover Dam, and the neon drenched Vegas Strip, you’ll be introduced to a colorful cast of characters, power-hungry factions, special weapons, mutated creatures and much more. Choose sides in the upcoming war or declare “winner takes all” and crown yourself the King of New Vegas in this follow-up to the 2008 videogame of the year, Fallout 3.",
+            image: 'xboxfalloutlasvegas.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[1]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "FIFA Street",
+            description: "FIFA Street (also known as FIFA Street 4 and FIFA Street 2012) is a street football video game developed by EA Canada and published by EA Sports.",
+            image: 'xboxfifastreet.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[1]._id,
+            genre: genres[3]._id
+        },
+        {
+            gameName: "FlatOut",
+            description: "FlatOut is a 2004 racing video game developed by the Finnish developer Bugbear Entertainment and published by Empire Interactive, with Vivendi Universal Games distributing in North America. Gameplay in FlatOut places emphasis on demolition derby-style races, and features a sophisticated physics engine.",
+            image: 'xboxflatout.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[1]._id,
+            genre: genres[5]._id
+        },
+        {
+            gameName: "Mass Effect",
+            description: "As Commander Shepard, you lead an elite squad on a heroic, action-packed adventure throughout the galaxy. Discover the imminent danger from an ancient threat and battle the traitorous Saren and his deadly army to save civilization. The fate of all life depends on your actions!",
+            image: 'xboxmasseffect.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[1]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "Mass Effect 3",
+            description: "Earth is burning. The Reapers have taken over, and other civilizations are falling like dominoes. Lead the final fight to save humanity and take back Earth from these terrifying machines, Commander Shepard. You’ll need backup for these battles. Fortunately, the galaxy has a habit of sending unexpected species your way. Recruit team members and forge new alliances, but be prepared to say goodbye at any time as partners make the ultimate sacrifice. It’s time for Commander Shepard to fight for the fate of the human race and save the galaxy. No pressure, Commander.",
+            image: 'xboxmasseffect3.png',
+            price: '29.99',
+            quantity: '10',
+            platform: platforms[1]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "NHL 2K9",
+            description: "NHL 2K9 is an ice hockey sports video game made by 2K Sports, part of the NHL 2K series, and published on the PlayStation 2, PlayStation 3, Wii, and Xbox 360 consoles. It features former Columbus Blue Jackets left winger Rick Nash on its cover.",
+            image: 'xboxnhl2k9.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[1]._id,
+            genre: genres[3]._id
+        },
+        {
+            gameName: "The Orange Box",
+            description: "The Orange Box is a bundle that includes five titles from Valve: Half-Life 2; Half-Life 2:Episode 1; Half-Life 2: Episode Two; Team Fortress 2, the sequel to the game that put class-based, multiplayer team warfare on the map; and Portal, the game that blends puzzles, first person action, and adventure gaming to produce an experience like no other.",
+            image: 'xboxorangebox.png',
+            price: '19.99',
+            quantity: '10',
+            platform: platforms[1]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Rainbow Six Siege",
+            description: "Master the art of destruction and gadgetry in Tom Clancy’s Rainbow Six Siege. Face intense close quarters combat, high lethality, tactical decision making, team play and explosive action within every moment. Experience a new era of fierce firefights and expert strategy born from the rich legacy of past Tom Clancy's Rainbow Six games.",
+            image: 'xboxrainbowwixsiege.png',
+            price: '49.99',
+            quantity: '10',
+            platform: platforms[1]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Red Dead Redemption",
+            description: "When federal agents threaten his family, former outlaw John Marston is sent across the American frontier to help bring the rule of law. Experience intense gun battles, dramatic train robberies, bounty hunting and duels during a time of violent change.",
+            image: 'xboxreddeadredemption.png',
+            price: '29.99',
+            quantity: '10',
+            platform: platforms[1]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "RoboCop",
+            description: "RoboCop is a first-person shooter video game based on the RoboCop films. It was developed and published by French company Titus Interactive, which acquired the rights to a RoboCop video game in 1999.",
+            image: 'xboxrobocop.png',
+            price: '19.99',
+            quantity: '5',
+            platform: platforms[1]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Spider-Man Edge of Time",
+            description: "Spider-Man: Edge of Time is a 2011 video game based on the superhero Spider-Man, developed by Beenox",
+            image: 'xboxspidermanedgeoftime.png',
+            price: '29.99',
+            quantity: '5',
+            platform: platforms[1]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "Titanfall",
+            description: "Respawn Entertainment gives you the most advanced titan technology in its new, single player campaign & multiplayer experience. Combine & conquer with new titans & pilots, deadlier weapons, & customization and progression systems that help you and your titan flow as one unstoppable killing force.",
+            image: 'xboxtitanfall.png',
+            price: '39.99',
+            quantity: '5',
+            platform: platforms[1]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Tron Evolution",
+            description: "Tron: Evolution is a third-person action-adventure video game, the tie-in for the film Tron: Legacy. It was developed by Propaganda Games and published by Disney Interactive.",
+            image: 'xboxtronevolution.png',
+            price: '29.99',
+            quantity: '5',
+            platform: platforms[1]._id,
+            genre: genres[0]._id
+        },
+        {
+            gameName: "Turok",
+            description: "Turok is back and no dinosaur is safe! When it was first released in 1997, Turok introduced gamers to a world teeming with cunning enemies, traps, puzzles and deadly weapons all within a vast 3D environment ready to explore. Now the classic game has been restored and enhanced with a new visual engine and exciting new features to sink your teeth into!",
+            image: 'xboxturok.png',
+            price: '19.99',
+            quantity: '5',
+            platform: platforms[1]._id,
+            genre: genres[1]._id
+        },
+        {
+            gameName: "Wolfenstein",
+            description: "Wolfenstein brings the Nazi’s dark obsession with the occult to life with epic action and harrowing shooter combat. Use a powerful arsenal of both definitive and occult-enhanced Axis & Allied weapons to beat back a supernatural Nazi force that is full of surprises. You play as BJ Blazkowicz, a highly decorated member of the Office of Secret Actions (OSA). You are sent on a special mission into the heart of the Reich to investigate evidence that the Nazis may possess a new and mysterious power. While behind enemy lines, you discover the Nazis have done much more than develop a new toy. The Nazis are harnessing the power of the Black Sun through a dark parallel dimension called The Veil, in order to create a weapon of war-ending mass destruction. You are the only one that can stop them and save the world from their perverse domination.",
+            image: 'xboxwolfenstein.png',
+            price: '29.99',
+            quantity: '5',
+            platform: platforms[1]._id,
+            genre: genres[1]._id
+        }
     ]);
 
     console.log('games seeded');
