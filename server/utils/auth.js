@@ -1,3 +1,10 @@
+/* -------------------------------- */
+/* Project  : Video Game E-Commerce */
+/* File     : auth.js               */
+/* Team     : Coders of Hyrule      */
+/* Date     : 07/05/2022            */
+/* Modified : 07/05/2022            */
+/* -------------------------------- */
 // Declare and import jason web token to use
 const jwt = require('jsonwebtoken');
 // Set token secret and expiration date
@@ -26,8 +33,8 @@ module.exports = {
     // Return request
     return req;
   },
-  signToken: function ({ username, email, _id }) {
-    const payload = { username, email, _id };
+  signToken: function ({ firstName, email, _id }) {
+    const payload = { firstName, email, _id };
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   }
 };

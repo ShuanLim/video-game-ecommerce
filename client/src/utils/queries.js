@@ -39,7 +39,7 @@ export const QUERY_ALL_GAMES = gql`
         platformName
       }
       genre {
-        _id
+        genreName
       }
     }
   }
@@ -71,6 +71,14 @@ export const QUERY_USER = gql`
           image
         }
       }
+    }
+  }
+`;
+// Query checkout
+export const QUERY_CHECKOUT = gql`
+  query getCheckout($games: [ID]!) {
+    checkout(games: $games) {
+      session
     }
   }
 `;

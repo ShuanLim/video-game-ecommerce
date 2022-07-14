@@ -3,7 +3,7 @@
 /* File     : mutations.js          */
 /* Team     : Coders of Hyrule      */
 /* Date     : 07/12/2022            */
-/* Modified : 07/12/2022            */
+/* Modified : 07/13/2022            */
 /* -------------------------------- */
 // Import apollo client
 import { gql } from '@apollo/client';
@@ -25,7 +25,7 @@ export const ADD_ORDER = gql`
       purchaseDate
       games {
         _id
-        name
+        gameName
         description
         price
         quantity

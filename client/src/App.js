@@ -13,6 +13,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {ApolloClient, InMemoryCache, ApolloProvider, createHttpLink} from '@apollo/client';
 // Import context
 import { setContext } from '@apollo/client/link/context';
+// Import store
+import { StoreProvider } from './utils/GlobalState';
 // Import navigation bar
 import Nav from './components/Nav';
 // Import home page
@@ -25,16 +27,15 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 // Import order history
 import OrderHistory from './pages/OrderHistory';
-// Import platform games page
-//import PlatformGames from './pages/PlatformGames';
-
+// Import footer section
 import Footer from './components/Footer';
-//import Sale from './components/Sale';
+
+// Import sale success page
+import Sale from './pages/Sale';
+
 //import 'semantic-ui-css/semantic.min.css'
 //import './App.css';
 
-// Import store
-import { StoreProvider } from './utils/GlobalState';
 // Create link to database
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -68,7 +69,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/orderHistory" element={<OrderHistory />} />
-              
+              <Route path="/sale" element={<Sale />} />
             </Routes>
           </StoreProvider>
           <Footer />

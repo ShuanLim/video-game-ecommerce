@@ -5,8 +5,12 @@
 /* Date     : 07/13/2022            */
 /* Modified : 07/13/2022            */
 /* -------------------------------- */
-// Import react
+// Import react module
 import React, { useEffect } from "react";
+// Import stripe module
+import { loadStripe } from '@stripe/stripe-js';
+// Import apollo server
+import { useLazyQuery } from '@apollo/client';
 // Import indexed database
 import { idbPromise } from "../../utils/helpers"
 // Import Cart item
@@ -17,10 +21,24 @@ import Auth from "../../utils/auth";
 import { useStoreContext } from "../../utils/GlobalState";
 // Import actions to handle cart
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
+// Import query checkout
+import { QUERY_CHECKOUT } from '../../utils/queries';
+// Import style file
 import "./style.css";
+// Use stripe
+const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 // Cart section
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
+  // Query for checkout
+  const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
+  useEffect(() => {
+    if (data) {
+      stripePromise.then((res) => {
+        res.redirectToCheckout({ sessionId: data.checkout.session });
+      });
+    }
+  }, [data]);
   useEffect(() => {
     async function getCart() {
       const cart = await idbPromise('cart', 'get');
@@ -41,7 +59,19 @@ const Cart = () => {
       sum += item.price * item.purchaseQuantity;
     });
     return sum.toFixed(2);
-  }
+  };
+  // Function to checkout in stripe
+  function submitCheckout() {
+    const gameIds = [];
+    state.cart.forEach((item) => {
+      for (let i = 0; i < item.purchaseQuantity; i++) {
+        gameIds.push(item._id);
+      }
+    });
+    getCheckout({
+      variables: { games: gameIds },
+    });
+  };
   // Validate if cart is open
   if (!state.cartOpen) {
     return (
@@ -51,12 +81,12 @@ const Cart = () => {
           aria-label="trash">🛒</span>
       </div>
     );
-  }
+  };
   // Show cart section
   return (
     <div className="cart">
-      <div className="close" onClick={toggleCart}>[close]</div>
-      <h2>Shopping Cart</h2>
+      <div className="close" onClick={toggleCart}>✗</div>
+      <h2>Shopping Games Cart</h2>
       {state.cart.length ? (
         <div>
           {state.cart.map(item => (
@@ -65,21 +95,20 @@ const Cart = () => {
           <div className="flex-row space-between">
             <strong>Total: ${calculateTotal()}</strong>
             {
-              Auth.loggedIn() ?
-                <button>
-                  Checkout
-              </button>
-                :
-                <span>(log in to check out)</span>
+              Auth.loggedIn() ? (
+                <button onClick={submitCheckout}>Checkout</button>
+                ) : (
+                <span>(Please log in to purchase games)</span>
+              )
             }
           </div>
         </div>
       ) : (
           <h3>
             <span role="img" aria-label="shocked">
-              😱
+            🕹️
           </span>
-          You haven't added anything to your cart yet!
+          You haven't added any game to your cart yet!
           </h3>
         )}
     </div>

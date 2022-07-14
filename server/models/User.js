@@ -1,3 +1,10 @@
+/* -------------------------------- */
+/* Project  : Video Game E-Commerce */
+/* File     : User.js               */
+/* Team     : Coders of Hyrule      */
+/* Date     : 07/05/2022            */
+/* Modified : 07/05/2022            */
+/* -------------------------------- */
 // Declare and import mongoose's Schema and model to use
 const { Schema, model } = require('mongoose');
 // Declare and import bcrypt
@@ -26,6 +33,7 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: true,
+      minlength: 3
     },
     carts: [Cart.schema]
   },
@@ -33,7 +41,7 @@ const userSchema = new Schema(
   {
     toJSON: {
       virtuals: true,
-    },
+    }
   }
 );
 // Hash user password

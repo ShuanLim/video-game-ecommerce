@@ -5,7 +5,7 @@
 /* Date     : 07/12/2022            */
 /* Modified : 07/12/2022            */
 /* -------------------------------- */
-// Import react
+// Import react module
 import React, { useState } from 'react';
 // Import apollo client
 import { useMutation } from '@apollo/client';
@@ -50,7 +50,7 @@ function Login(props) {
         <div className="flex-row space-between my-2">
           <label htmlFor="email">Email address:</label>
           <input
-            placeholder="youremail@test.com"
+            placeholder="youremail@email.com"
             name="email"
             type="email"
             id="email"
@@ -69,11 +69,11 @@ function Login(props) {
         </div>
         {error ? (
           <div>
-            <p className="error-text">The provided credentials are incorrect</p>
+            <p className="error-text">The provided email or password is incorrect</p>
           </div>
         ) : null}
         <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+          <button type="submit">Create</button>
         </div>
       </form>
     </div>

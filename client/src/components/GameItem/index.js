@@ -3,7 +3,7 @@
 /* File     : GameItem/index.js     */
 /* Team     : Coders of Hyrule      */
 /* Date     : 07/09/2022            */
-/* Modified : 07/12/2022            */
+/* Modified : 07/13/2022            */
 /* -------------------------------- */
 // Import react module
 import React from "react";
@@ -48,6 +48,7 @@ function GameItem(item) {
       idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
     }
   }
+  // Show games
   return (
     <div className="card px-1 py-1">
       <Link to={`/games/${_id}`}>
@@ -65,4 +66,5 @@ function GameItem(item) {
     </div>
   );
 }
+// Export game
 export default GameItem;

@@ -5,10 +5,13 @@
 /* Date     : 07/10/2022            */
 /* Modified : 07/12/2022            */
 /* -------------------------------- */
-// react-api-call
+// Import react module
 import React from 'react';
+// Import router dom
 import { Link } from "react-router-dom";
+// Import authorization
 import Auth from "../../utils/auth";
+// Function to show navbar
 function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
@@ -16,7 +19,7 @@ function Nav() {
         <ul className="flex-row">
           <li className="mx-1">
             <Link to="/orderHistory">
-              Order History
+              Games purchased
             </Link>
           </li>
           <li className="mx-1">
@@ -44,8 +47,8 @@ function Nav() {
       );
     }
   }
+  // Show navbar section
   return (
-    
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
@@ -60,5 +63,5 @@ function Nav() {
     
   );
 }
-
+// Export nav
 export default Nav;

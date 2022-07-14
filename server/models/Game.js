@@ -1,4 +1,11 @@
-// Declare and import mongoose to use
+/* -------------------------------- */
+/* Project  : Video Game E-Commerce */
+/* File     : Game.js              */
+/* Team     : Coders of Hyrule      */
+/* Date     : 07/05/2022            */
+/* Modified : 07/05/2022            */
+/* -------------------------------- */
+// Declare and import mongoose's Schema and model to use
 const { Schema, model } = require('mongoose');
 // Create game schema
 const gameSchema = new Schema({

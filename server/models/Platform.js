@@ -1,3 +1,11 @@
+/* -------------------------------- */
+/* Project  : Video Game E-Commerce */
+/* File     : Platform.js           */
+/* Team     : Coders of Hyrule      */
+/* Date     : 07/05/2022            */
+/* Modified : 07/05/2022            */
+/* -------------------------------- */
+// Declare and import mongoose's Schema and model to use
 const { Schema, model } = require('mongoose');
 // Create game schema
 const platformSchema = new Schema({

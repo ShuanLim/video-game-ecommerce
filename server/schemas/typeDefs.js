@@ -1,5 +1,13 @@
+/* -------------------------------- */
+/* Project  : Video Game E-Commerce */
+/* File     : typeDefs.js           */
+/* Team     : Coders of Hyrule      */
+/* Date     : 07/07/2022            */
+/* Modified : 07/11/2022            */
+/* -------------------------------- */
+// Import GrapQL
 const { gql } = require('apollo-server-express');
-
+// Create database definition
 const typeDefs = gql`
     type Genre {
         _id: ID
@@ -48,7 +56,7 @@ const typeDefs = gql`
     type Query {
         genres: [Genre]
         platforms: [Platform]
-        games(platform: ID, genre: ID name: String): [Game]
+        games(platform: ID, genre: ID gameName: String): [Game]
         game(_id: ID!): Game
         user: User
         users: [User]
@@ -65,5 +73,5 @@ const typeDefs = gql`
         updateGame(_id: ID!, quantity: Int!): Game
     }
 `;
-
+// Export database definition
 module.exports = typeDefs;
