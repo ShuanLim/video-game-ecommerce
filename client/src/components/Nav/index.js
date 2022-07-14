@@ -49,10 +49,10 @@ function Nav() {
   }
   // Show navbar section
   return (
-    <header className="flex-row px-1">
+    <header className="flex-column title">
       <h1>
         <Link to="/">
-          <span role="img" aria-label="console control"> 🎮 </span>
+          <span role="img" aria-label="console control"> 🕹️ </span>
           Super Awesome Video Game E-Commerce Store
         </Link>
       </h1>
@@ -60,7 +60,6 @@ function Nav() {
         {showNavigation()}
       </nav>
     </header>
-    
   );
 }
 // Export nav

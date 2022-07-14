@@ -23,6 +23,8 @@ import { idbPromise } from '../utils/helpers';
 import Cart from '../components/Cart';
 // Import loading image
 import spinner from '../assets/spinner.gif';
+// Import authorization
+import Auth from "../utils/auth";
 // Function to show game detail
 function Detail() {
   // Store query game
@@ -90,20 +92,23 @@ function Detail() {
     <>
       {currentGame && cart ? (
         <div className="container my-1">
-          <Link to="/">← Back to Games</Link>
+          <Link to="/"> ↩️ All Games</Link>
           <h2>{currentGame.gameName}</h2>
           <p>{currentGame.description}</p>
-          <p>
-            <strong>Price:</strong>${currentGame.price}{' '}
-            <button onClick={addToCart}>Add to Cart</button>
-            <button
-              disabled={!cart.find((p) => p._id === currentGame._id)}
-              onClick={removeFromCart}
-            >
-              Remove from Cart
-            </button>
-          </p>
-
+          {Auth.loggedIn() ? (
+            <p>
+              <strong>Price:</strong>${currentGame.price}{' '}
+              <button onClick={addToCart}>Add to Cart</button>
+              <button
+                disabled={!cart.find((p) => p._id === currentGame._id)}
+                onClick={removeFromCart}
+              >
+                Remove from Cart
+              </button>
+            </p>
+          ) : (
+            <p></p>
+          )}
           <img
             src={`/images/${currentGame.image}`}
             alt={currentGame.gameName}
@@ -111,7 +116,11 @@ function Detail() {
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
-      <Cart />
+      {Auth.loggedIn() ? (
+        <Cart />
+      ) : (
+        <p></p>
+      )}
     </>
   );
 }

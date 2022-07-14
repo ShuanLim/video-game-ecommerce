@@ -13,13 +13,25 @@ import PlatformMenu from "../components/PlatformMenu";
 import GameList from "../components/GameList";
 // Import Cart to store games
 import Cart from "../components/Cart";
+// Import authorization
+import Auth from "../utils/auth";
+// Import router dom
+import { Link } from "react-router-dom";
 // Declares Home function
 const Home = () => {
   return (
     <div className="container">
       <PlatformMenu />
+      {Auth.loggedIn() ? (
+        <Cart />
+      ) : (
+        <div className="login-games">
+        <Link to="/login">
+        🔐 Login to buy games!
+        </Link>
+        </div>
+      )}
       <GameList />
-      <Cart />
     </div>
   );
 };

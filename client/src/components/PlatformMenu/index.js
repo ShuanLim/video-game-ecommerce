@@ -59,6 +59,9 @@ function PlatformMenu() {
           {item.platformName}
         </button>
       ))}
+      <button key="" onClick={() => { handleClick(""); }} >
+          All games
+      </button>
     </div>
   );
 }

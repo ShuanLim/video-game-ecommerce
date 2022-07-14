@@ -1,10 +1,11 @@
 :root {
   --primary: #272f32;
-  --secondary: #F3A847;
+  --xbox: #92f347;/*#F3A847;*/
   --tertiary: #ffffff;
   --light: #ffffff;
   --dark: #272f32;
-  --error: rgb(228, 46, 1);
+  --ps: #1961df;
+  --nintendo: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
 }
@@ -19,14 +20,43 @@ body {
 }
 
 body {
-  background-color: #1a1a19;
+  /*background-color: #1a1a19;*/
+  background-image: url("assets/bg.jpg");
   margin: 0;
   padding: 0;
-  font-family: 'Karla', sans-serif;
+  font-family: "Play";
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
   color: var(--light);
+}
+
+ul {
+  padding-left: 89%;
+  padding-right: 1%;
+  align-content: flex-end;
+  list-style-type: none;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+li {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-right: 1%;
+  padding-left: 4%;
+}
+.login-games {
+  color: red;
+  margin-top: 1%;
+  margin-left: 50%;
+}
+.title {
+  padding-left: 2%;
+  padding-top: 1%;
+}
+.navigator {
+  padding-right: 0%;
 }
 
 h1,
@@ -35,7 +65,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Play', sans-serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -77,11 +107,13 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: solid;
+  color: var(--nintendo);
 }
 
 header {
-  background: var(--primary);
+  /*background: red;var(--primary);*/
+  background-image: url("assets/bg.gif");
 }
 
 header a {
@@ -97,11 +129,13 @@ button {
   outline: none;
   cursor: pointer;
   margin: 0 1px;
-  background-color: var(--secondary);
+  background-color: var(--xbox);
 }
 
 button:hover {
   opacity: .8;
+  background-color: var(--ps);
+  color: var(--light);
 }
 
 button[disabled] {
@@ -117,8 +151,10 @@ span[role="img"] {
   cursor: default;
 }
 
+
 form {
   width: 40%;
+  background-color: var(--ps);
 }
 
 input {
@@ -131,7 +167,7 @@ input {
 }
 
 input:focus {
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--xbox);
   box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
 
@@ -201,7 +237,7 @@ input:focus {
 }
 
 .error-text {
-  color: var(--error);
+  color: var(--nintendo);
 }
 
 @media screen and (max-width: 768px) {
