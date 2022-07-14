@@ -27,6 +27,7 @@ function GameList() {
   const [state, dispatch] = useStoreContext();
   const { currentPlatform } = state;
   const { loading, data } = useQuery(QUERY_GAMES);
+  console.log(data);
   useEffect(() => {
     if (data) {
       dispatch({
