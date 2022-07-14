@@ -9,17 +9,10 @@ db.once('open', async () => {
         { genreName: 'Shooter' },
         { genreName: 'Puzzle'},
         { genreName: 'Sports' },
-<<<<<<< HEAD
         { genreName: 'Simulation' },
         { genreName: 'Racing' },
         { genreName: 'Fighting'},
         { genreName: 'MMORPG'}
-=======
-        { gameGenre: 'Simulation' },
-        { gameGenre: 'Racing' },
-        { gameGenre: 'Fighting'},
-        { gameGenre: 'MMORPG'}
->>>>>>> 079ad3951fef858d74b2896d18ee6345d2fd64f8
     ]);
 
     console.log('genres seeded');
@@ -40,11 +33,7 @@ db.once('open', async () => {
         {
             gameName: 'Battlefield 2042',
             description: "Battlefield 2042 marks the return to the iconic all-out warfare of the franchise. Adapt and overcome dynamically-changing battlegrounds with the help of your squad and a cutting-edge arsenal. With support for 128 players*, prepare for unprecedented scale on vast environments. Take on massive experiences, from updated multiplayer modes like Conquest and Breakthrough to the all-new Battlefield™ Hazard Zone.",
-<<<<<<< HEAD
             image: 'bf2042cover.png',
-=======
-            image: 'bf2042.png',
->>>>>>> 079ad3951fef858d74b2896d18ee6345d2fd64f8
             price: '39.99',
             quantity: '10',
             platform: platforms[2]._id,
@@ -150,18 +139,6 @@ db.once('open', async () => {
             genre: genres[0]._id
         },
         {
-<<<<<<< HEAD
-=======
-            gameName: 'Battletoads',
-            description: "Battletoads is a video game media franchise by Rare that began with the original beat 'em up game Battletoads in 1991. Starring three anthropomorphic toads named after skin conditions, Rash, Zitz, and Pimple, the series was created to rival the Teenage Mutant Ninja Turtles games series.",
-            image: 'nintendobattletoads.png',
-            price: '19.99',
-            quantity: '1',
-            platform: platforms[0]._id,
-            genre: genres[0]._id
-        },
-        {
->>>>>>> 079ad3951fef858d74b2896d18ee6345d2fd64f8
             gameName: 'Coraline',
             description: "Coraline, also known as Coraline: The Game, is a 2009 game based on the film of the same name. It was released on January 27, 2009, in close proximity to the film's theatrical release.",
             image: 'nintendocaroline.png',
@@ -186,7 +163,6 @@ db.once('open', async () => {
             price: '19.99',
             quantity: '2',
             platform: platforms[0]._id,
-<<<<<<< HEAD
             genre: genres[1]._id
         },
         {
@@ -212,177 +188,6 @@ db.once('open', async () => {
             description: "The Lego Movie 2 Videogame is a Lego-themed action-adventure video game developed by Traveller's Tales and published by Warner Bros. Interactive Entertainment.",
             image: 'nintendolegomovie.png',
             price: '29.99',
-=======
-            genre: genres[1]._id
-        },
-        {
-            gameName: 'Excitebike',
-            description: "Excitebike is a motocross racing video game developed and published by Nintendo.",
-            image: 'nintendoexcitabkie.png',
-            price: '19.99',
-            quantity: '2',
-            platform: platforms[0]._id,
-            genre: genres[5]._id
-        },
-        {
-            gameName: 'Jumanji',
-            description: "Unite in adventure and laughter in the action-packed game of Jumanji, the ultimate team challenge for those seeking to leave their world behind.",
-            image: 'nintendojumanji.png',
-            price: '29.99',
-            quantity: '10',
-            platform: platforms[0]._id,
-            genre: genres[0]._id
-        },
-        {
-            gameName: 'The Lego Movie 2 Videogame',
-            description: "The Lego Movie 2 Videogame is a Lego-themed action-adventure video game developed by Traveller's Tales and published by Warner Bros. Interactive Entertainment.",
-            image: 'nintendolegomovie.png',
-            price: '29.99',
-            quantity: '5',
-            platform: platforms[0]._id,
-            genre: genres[0]._id
-        },
-        {
-            gameName: 'Mario Kart',
-            description: "In Super Mario Kart, the player takes control of one of eight Mario series characters, each with differing capabilities. In single player mode players can race against computer-controlled characters in multi-race cups over three difficulty levels. During the races, offensive and speed boosting power-ups can be used to gain an advantage. Alternatively players can race against the clock in a Time Trial mode. In multiplayer mode two players can simultaneously take part in the cups or can race against each other one-on-one in Match Race mode. In a third multiplayer mode – Battle Mode – the aim is to defeat the other players by attacking them with power-ups, destroying balloons which surround each kart.",
-            image: 'nintendomariokartoriginal.png',
-            price: '19.99',
-            quantity: '3',
-            platform: platforms[0]._id,
-            genre: genres[5]._id
-        },
-        {
-            gameName: 'Mario Super Sluggers',
-            description: "Mario Super Sluggers stars the ever-lovable Mario and his crew of friends. It builds on the social-gaming fun and movements people learned in Wii Sports and turns them into a full-fledged baseball game that can be played by every member of the household. Players make a throwing motion with the Wii Remote controller to pitch the baseball and make a swinging motion to swing at the pitch. The game boasts more than 30 playable Nintendo characters and all the madness of a Mario sports game. Just like Mario Kart Wii, it bridges the gap between experienced players and those new to the Wii console, with fun challenges and beautiful graphics.",
-            image: 'nintendomariosupersluggers.png',
-            price: '39.99',
-            quantity: '10',
-            platform: platforms[0]._id,
-            genre: genres[3]._id
-        },
-        {
-            gameName: 'NCAA Football 2004',
-            description: "NCAA Football 2004 is an American football video game released in 2003 by Tiburon. It is the successor to NCAA Football 2003 in the NCAA Football series. The player on the cover is former USC quarterback Carson Palmer.",
-            image: 'nintendoncaafootball2004.png',
-            price: '19.99',
-            quantity: '5',
-            platform: platforms[0]._id,
-            genre: genres[3]._id
-        },
-        {
-            gameName: 'One Piece: Grand Battle',
-            description: "One Piece: Grand Battle, is a fighting game made in Japan based on the anime and manga series One Piece. It is the fourth and final game in One Piece's Grand Battle series and the nineteenth One Piece video game released.",
-            image: 'nintendoonepiece.png',
-            price: '19.99',
-            quantity: '5',
-            platform: platforms[0]._id,
-            genre: genres[6]._id
-        },
-        {
-            gameName: 'Rampage',
-            description: "Rampage is a 1986 arcade game by Bally Midway.[2] Players take control of a trio of gigantic monsters trying to survive against onslaughts of military forces. Each round is completed when a particular city is completely reduced to rubble.",
-            image: 'nintendorampage.png',
-            price: '19.99',
-            quantity: '3',
-            platform: platforms[0]._id,
-            genre: genres[0]._id
-        },
-        {
-            gameName: 'Sonic: Lost World',
-            description: "Sonic Lost World is a platform game with action-adventure elements, in which the player controls Sonic the Hedgehog as he travels across the Lost Hex in order to rescue captured animals and stop the Deadly Six.",
-            image: 'nintendosoniclostworld.png',
-            price: '24.99',
-            quantity: '5',
-            platform: platforms[0]._id,
-            genre: genres[0]._id
-        },
-        {
-            gameName: 'Nintendo World Cup',
-            description: "Eight students known as Atsushi, Genei, Hiroyuki, Kunio, Masa, Masahiro, Susumu and Takashi compete in a soccer tournament against 13 other high schools.",
-            image: 'nintendoworldcup.png',
-            price: '19.99',
-            quantity: '3',
-            platform: platforms[0]._id,
-            genre: genres[3]._id
-        },
-        {
-            gameName: 'Pac-Man Collection',
-            description: "Pac-Man Collection is a collection of Pac-Man games",
-            image: 'pacman.png',
-            price: '19.99',
-            quantity: '7',
-            platform: platforms[0]._id,
-            genre: genres[2]._id
-        },
-        {
-            gameName: 'Battlefield 2 Deluxe Edition',
-            description: "Battlefield 2 is a first-person shooter video game, developed by DICE and published by Electronic Arts for Microsoft Windows in June 2005 as the third game in the Battlefield series.",
-            image: 'pcbf2.png',
-            price: '29.99',
-            quantity: '5',
-            platform: platforms[2]._id,
-            genre: genres[1]._id
-        },
-        {
-            gameName: 'Destiny 2',
-            description: "Destiny 2 is a free-to-play online-only multiplayer first-person shooter video game developed by Bungie.",
-            image: 'pcdestiny2.png',
-            price: '59.99',
-            quantity: '15',
-            platform: platforms[2]._id,
-            genre: genres[1]._id
-        },
-        {
-            gameName: 'Halo: Combat Evolved',
-            description: "Halo: Combat Evolved is a 2001 first-person shooter science-fiction video game developed by Bungie Studios and the first game in the Halo series. It focuses on John-117 and the crew of the UNSC Pillar of Autumn who, fleeing from the Fall of Reach, stumble on the Forerunner Halo Installation 04, only to be forced into a desperate battle against the Covenant and the Flood.",
-            image: 'pcdoom3.png',
-            price: '19.99',
-            quantity: '10',
-            platform: platforms[2]._id,
-            genre: genres[1]._id
-        },
-        {
-            gameName: 'Battlefield 4',
-            description: "Fueled by the next-generation power and fidelity of Frostbite™ 3, Battlefield 4 provides a visceral, dramatic experience unlike any other. Only in Battlefield can you demolish the buildings shielding your enemy. Only in Battlefield will you lead an assault from the back of a gun boat. Do more and be more by playing to your strengths and carving your own path to victory. In addition to its hallmark multiplayer, Battlefield 4 features an intense, dramatic, character-driven campaign that starts with the evacuation of American VIPs from Shanghai and follows your squad’s struggle to find its way home. Immerse yourself in the glorious chaos of all-out war, found only in Battlefield.",
-            image: 'pcbf4.png',
-            price: '34.99',
-            quantity: '10',
-            platform: platforms[2]._id,
-            genre: genres[1]._id
-        },
-        {
-            gameName: 'Battlefield 1942',
-            description: "Battlefield 1942 (also known as BF1942) is the first installment in the Battlefield series and was developed by DICE. It was released for PC in 2002 and was later made the AIAS and IGN Game of the Year. ",
-            image: 'pcbf1942.png',
-            price: '19.99',
-            quantity: '10',
-            platform: platforms[2]._id,
-            genre: genres[1]._id
-        },
-        {
-            gameName: "Doom: Collector's Edition",
-            description: "Developed by id software, the studio that pioneered the first-person shooter genre and created multiplayer Deathmatch, DOOM returns as a brutally fun and challenging modern-day shooter experience. Relentless demons, impossibly destructive guns, and fast, fluid movement provide the foundation for intense, first-person combat – whether you’re obliterating demon hordes through the depths of Hell in the single-player campaign, or competing against your friends in numerous multiplayer modes. Expand your gameplay experience using DOOM SnapMap game editor to easily create, play, and share your content with the world.",
-            image: 'pcdoomcollectorsedition.png',
-            price: '49.99',
-            quantity: '3',
-            platform: platforms[2]._id,
-            genre: genres[1]._id
-        },
-        {
-            gameName: "Everquest",
-            description: "EverQuest is a 3D fantasy-themed massively multiplayer online role-playing game originally developed by Verant Interactive and 989 Studios for Windows PCs.",
-            image: 'pceverquest.png',
-            price: '19.99',
-            quantity: '3',
-            platform: platforms[2]._id,
-            genre: genres[7]._id
-        },
-        {
-            gameName: "Far Cry",
-            description: "Set on a mysterious tropical archipelago, the game follows Jack Carver, a former American special forces operative, as he searches for the female journalist, Valerie Constantine, who accompanied him to the islands but went missing after their boat was destroyed by mercenaries. As Jack explores the islands, he begins to discover the horrific genetic experiments being conducted on the local wildlife and must confront the mad scientist behind them.",
-            image: 'pcfarcry.png',
-            price: '19.99',
->>>>>>> 079ad3951fef858d74b2896d18ee6345d2fd64f8
             quantity: '5',
             platform: platforms[0]._id,
             genre: genres[0]._id
@@ -795,11 +600,7 @@ db.once('open', async () => {
         {
             gameName: "Shinobi",
             description: "Shinobi is a 3D action-adventure video game developed by Overworks and published by Sega as part of the Shinobi series.",
-<<<<<<< HEAD
             image: 'playstationshinobi.png',
-=======
-            image: 'playstationmortalkombatarmageddon.png',
->>>>>>> 079ad3951fef858d74b2896d18ee6345d2fd64f8
             price: '19.99',
             quantity: '10',
             platform: platforms[3]._id,
@@ -914,7 +715,6 @@ db.once('open', async () => {
             genre: genres[1]._id
         },
         {
-<<<<<<< HEAD
             gameName: "FIFA Street",
             description: "FIFA Street (also known as FIFA Street 4 and FIFA Street 2012) is a street football video game developed by EA Canada and published by EA Sports.",
             image: 'xboxfifastreet.png',
@@ -954,65 +754,12 @@ db.once('open', async () => {
             gameName: "NHL 2K9",
             description: "NHL 2K9 is an ice hockey sports video game made by 2K Sports, part of the NHL 2K series, and published on the PlayStation 2, PlayStation 3, Wii, and Xbox 360 consoles. It features former Columbus Blue Jackets left winger Rick Nash on its cover.",
             image: 'xboxnhl2k9.png',
-=======
-            gameName: "Fallout New Vegas",
-            description: "As you battle your way across the heat-blasted Mojave Wasteland, the colossal Hoover Dam, and the neon drenched Vegas Strip, you’ll be introduced to a colorful cast of characters, power-hungry factions, special weapons, mutated creatures and much more. Choose sides in the upcoming war or declare “winner takes all” and crown yourself the King of New Vegas in this follow-up to the 2008 videogame of the year, Fallout 3.",
-            image: 'xboxfalloutlasvegas.png',
-            price: '19.99',
-            quantity: '10',
-            platform: platforms[1]._id,
-            genre: genres[1]._id
-        },
-        {
-            gameName: "FIFA Street",
-            description: "FIFA Street (also known as FIFA Street 4 and FIFA Street 2012) is a street football video game developed by EA Canada and published by EA Sports.",
-            image: 'xboxfifastreet.png',
->>>>>>> 079ad3951fef858d74b2896d18ee6345d2fd64f8
             price: '19.99',
             quantity: '10',
             platform: platforms[1]._id,
             genre: genres[3]._id
         },
         {
-<<<<<<< HEAD
-=======
-            gameName: "FlatOut",
-            description: "FlatOut is a 2004 racing video game developed by the Finnish developer Bugbear Entertainment and published by Empire Interactive, with Vivendi Universal Games distributing in North America. Gameplay in FlatOut places emphasis on demolition derby-style races, and features a sophisticated physics engine.",
-            image: 'xboxflatout.png',
-            price: '19.99',
-            quantity: '10',
-            platform: platforms[1]._id,
-            genre: genres[5]._id
-        },
-        {
-            gameName: "Mass Effect",
-            description: "As Commander Shepard, you lead an elite squad on a heroic, action-packed adventure throughout the galaxy. Discover the imminent danger from an ancient threat and battle the traitorous Saren and his deadly army to save civilization. The fate of all life depends on your actions!",
-            image: 'xboxmasseffect.png',
-            price: '19.99',
-            quantity: '10',
-            platform: platforms[1]._id,
-            genre: genres[0]._id
-        },
-        {
-            gameName: "Mass Effect 3",
-            description: "Earth is burning. The Reapers have taken over, and other civilizations are falling like dominoes. Lead the final fight to save humanity and take back Earth from these terrifying machines, Commander Shepard. You’ll need backup for these battles. Fortunately, the galaxy has a habit of sending unexpected species your way. Recruit team members and forge new alliances, but be prepared to say goodbye at any time as partners make the ultimate sacrifice. It’s time for Commander Shepard to fight for the fate of the human race and save the galaxy. No pressure, Commander.",
-            image: 'xboxmasseffect3.png',
-            price: '29.99',
-            quantity: '10',
-            platform: platforms[1]._id,
-            genre: genres[0]._id
-        },
-        {
-            gameName: "NHL 2K9",
-            description: "NHL 2K9 is an ice hockey sports video game made by 2K Sports, part of the NHL 2K series, and published on the PlayStation 2, PlayStation 3, Wii, and Xbox 360 consoles. It features former Columbus Blue Jackets left winger Rick Nash on its cover.",
-            image: 'xboxnhl2k9.png',
-            price: '19.99',
-            quantity: '10',
-            platform: platforms[1]._id,
-            genre: genres[3]._id
-        },
-        {
->>>>>>> 079ad3951fef858d74b2896d18ee6345d2fd64f8
             gameName: "The Orange Box",
             description: "The Orange Box is a bundle that includes five titles from Valve: Half-Life 2; Half-Life 2:Episode 1; Half-Life 2: Episode Two; Team Fortress 2, the sequel to the game that put class-based, multiplayer team warfare on the map; and Portal, the game that blends puzzles, first person action, and adventure gaming to produce an experience like no other.",
             image: 'xboxorangebox.png',
