@@ -6,7 +6,10 @@
 /* Modified : 07/05/2022            */
 /* -------------------------------- */
 // Declare and import mongoose's Schema and model to use
-const { Schema, model } = require('mongoose');
+
+const mongoose = require('mongoose');
+
+const { Schema } = mongoose;
 // Declare and import bcrypt
 const bcrypt = require('bcrypt');
 // Import schema from Cart.js
@@ -33,15 +36,9 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: true,
-      minlength: 3
+      minlength: 5
     },
     carts: [Cart.schema]
-  },
-  // Set this to use virtual below
-  {
-    toJSON: {
-      virtuals: true,
-    }
   }
 );
 // Hash user password
@@ -56,11 +53,7 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
-// Number of products in cart
-userSchema.virtual('cartCount').get(function () {
-  return this.cart.length;
-});
 // Define mongose User model
-const User = model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 // Export User model
 module.exports = User;

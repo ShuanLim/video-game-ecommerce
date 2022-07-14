@@ -13,26 +13,23 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {ApolloClient, InMemoryCache, ApolloProvider, createHttpLink} from '@apollo/client';
 // Import context
 import { setContext } from '@apollo/client/link/context';
-// Import store
-import { StoreProvider } from './utils/GlobalState';
-// Import navigation bar
-import Nav from './components/Nav';
 // Import home page
 import Home from './pages/Home';
 // Import detail page
 import Detail from './pages/Detail';
+import NoMatch from './pages/NoMatch';
 // Import login page
 import Login from './pages/Login';
 // Import sign up
 import Signup from './pages/Signup';
+// Import navigation bar
+import Nav from './components/Nav';
+// Import store
+import { StoreProvider } from './utils/GlobalState';
+// Import sale success page
+import Success from './pages/Success';
 // Import order history
 import OrderHistory from './pages/OrderHistory';
-// Import footer section
-import Footer from './components/Footer';
-
-// Import sale success page
-import Sale from './pages/Sale';
-
 //import 'semantic-ui-css/semantic.min.css'
 //import './App.css';
 
@@ -65,14 +62,14 @@ function App() {
             <Nav />
             <Routes>      
               <Route path="/" element={<Home />} />
-              <Route path="/games/:id" element={<Detail />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/success" element={<Success />} />
               <Route path="/orderHistory" element={<OrderHistory />} />
-              <Route path="/sale" element={<Sale />} />
+              <Route path="/games/:id" element={<Detail />} />
+              <Route path="*" element={<NoMatch />} />
             </Routes>
           </StoreProvider>
-          <Footer />
         </div>
       </Router>
     </ApolloProvider>

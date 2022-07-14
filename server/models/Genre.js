@@ -6,7 +6,10 @@
 /* Modified : 07/05/2022            */
 /* -------------------------------- */
 // Declare and import mongoose's Schema and model to use
-const { Schema, model } = require('mongoose');
+
+const mongoose = require('mongoose');
+
+const { Schema } = mongoose;
 // Create genre schema
 const genreSchema = new Schema({
   genreName: {
@@ -16,6 +19,6 @@ const genreSchema = new Schema({
   }
 });
 // Define mongose Genre model
-const Genre = model('Genre', genreSchema);
+const Genre = mongoose.model('Genre', genreSchema);
 // Export Genre model
 module.exports = Genre;

@@ -6,7 +6,10 @@
 /* Modified : 07/05/2022            */
 /* -------------------------------- */
 // Declare and import mongoose's Schema and model to use
-const { Schema, model } = require('mongoose');
+
+const mongoose = require('mongoose');
+
+const { Schema } = mongoose;
 // Create cart schema
 const cartSchema = new Schema({
   purchaseDate: {
@@ -21,6 +24,6 @@ const cartSchema = new Schema({
   ]
 });
 // Define mongose Cart model
-const Cart = model('Cart', cartSchema);
+const Cart = mongoose.model('Cart', cartSchema);
 // Export Cart model
 module.exports = Cart;

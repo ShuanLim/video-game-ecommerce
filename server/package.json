@@ -5,22 +5,22 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "watch": "nodemon server.js",
+    "watch": "nodemon",
     "seed": "node config/seeds.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-express": "^3.9.0",
-    "bcrypt": "^5.0.0",
-    "express": "^4.17.1",
-    "graphql": "^16.5.0",
+    "bcrypt": "^5.0.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.10",
-    "stripe": "^8.67.0"
+    "stripe": "^8.67.0",
+    "apollo-server-express": "^3.6.1",
+    "express": "^4.17.2",
+    "graphql": "^16.2.0",
+    "mongoose": "^6.1.6"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.2"
   }
 }

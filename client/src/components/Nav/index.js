@@ -17,11 +17,11 @@ function Nav() {
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
+          {/*<li className="mx-1">
             <Link to="/orderHistory">
               Games purchased
             </Link>
-          </li>
+          </li>*/}
           <li className="mx-1">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
             <a href="/" onClick={() => Auth.logout()}>
@@ -52,7 +52,7 @@ function Nav() {
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
-          <span role="img" aria-label="shopping bag"> 🎮 </span>
+          <span role="img" aria-label="console control"> 🎮 </span>
           Super Awesome Video Game E-Commerce Store
         </Link>
       </h1>

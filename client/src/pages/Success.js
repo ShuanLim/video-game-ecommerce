@@ -16,7 +16,7 @@ import { ADD_ORDER } from '../utils/mutations';
 // Import indexed database
 import { idbPromise } from '../utils/helpers';
 // Function sale
-function Sale() {
+function Success() {
   const [addOrder] = useMutation(ADD_ORDER);
   useEffect(() => {
     async function saveOrder() {
@@ -47,4 +47,4 @@ function Sale() {
   );
 }
 // Export sale
-export default Sale;
+export default Success;

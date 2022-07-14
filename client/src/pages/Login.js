@@ -44,38 +44,46 @@ function Login(props) {
   // Show login page
   return (
     <div className="container my-1">
-      <Link to="/signup">← Go to Signup</Link>
-      <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email address:</label>
-          <input
-            placeholder="youremail@email.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        {error ? (
-          <div>
-            <p className="error-text">The provided email or password is incorrect</p>
+      {/*<h2>Login</h2>*/}
+      <div className ="ui raised very padded text container segment">
+        <h1 className="ui center aligned green inverted header">Login to your account</h1>
+        <div className ="row">
+          <div className ="ui two column centered grid">
+            <form className="ui large form" onSubmit={handleFormSubmit}>
+              <div className="flex-row space-between my-2">
+                <label htmlFor="email">Email:</label>
+                <input
+                  placeholder="youremail@email.com"
+                  name="email"
+                  type="email"
+                  id="email"
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="flex-row space-between my-2">
+                <label htmlFor="pwd">Password:</label>
+                <input
+                  placeholder="******"
+                  name="password"
+                  type="password"
+                  id="pwd"
+                  onChange={handleChange}
+                />
+              </div>
+              {error ? (
+              <div>
+                <p className="error-text">The provided email or password is incorrect</p>
+              </div>
+              ) : null}
+              <div className="flex-row flex-end">
+                {/*<button type="submit">Submit</button>*/}
+                <button type="submit" className='large fluid ui green basic button'>Login</button>
+              </div>
+              <Link to="/signup">Signup</Link>
+            </form>
           </div>
-        ) : null}
-        <div className="flex-row flex-end">
-          <button type="submit">Create</button>
         </div>
-      </form>
+      </div>
     </div>
   );
 }

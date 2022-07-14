@@ -6,7 +6,10 @@
 /* Modified : 07/05/2022            */
 /* -------------------------------- */
 // Declare and import mongoose's Schema and model to use
-const { Schema, model } = require('mongoose');
+
+const mongoose = require('mongoose');
+
+const { Schema } = mongoose;
 // Create game schema
 const platformSchema = new Schema({
   platformName: {
@@ -16,6 +19,6 @@ const platformSchema = new Schema({
   }
 });
 // Define mongose Platform model
-const Platform = model('Platform', platformSchema);
+const Platform = mongoose.model('Platform', platformSchema);
 // Export Platform model
 module.exports = Platform;

@@ -6,7 +6,10 @@
 /* Modified : 07/05/2022            */
 /* -------------------------------- */
 // Declare and import mongoose's Schema and model to use
-const { Schema, model } = require('mongoose');
+
+const mongoose = require('mongoose');
+
+const { Schema } = mongoose;
 // Create game schema
 const gameSchema = new Schema({
   gameName: {
@@ -42,6 +45,6 @@ const gameSchema = new Schema({
   }
 });
 // Define mongose Game model
-const Game = model('Game', gameSchema);
+const Game = mongoose.model('Game', gameSchema);
 // Export Game model
 module.exports = Game;
