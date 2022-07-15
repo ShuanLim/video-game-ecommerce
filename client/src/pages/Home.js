@@ -7,8 +7,6 @@
 /* -------------------------------- */
 // Import react module
 import React from "react";
-// Import platfform options component
-import PlatformMenu from "../components/PlatformMenu";
 // Import game list component
 import GameList from "../components/GameList";
 // Import Cart to store games

@@ -54,7 +54,7 @@ function GameList() {
   // Show all games
   return (
     <div className="my-2">
-      <h2>Our Games:</h2>
+      <h2>Games</h2>
       {state.games.length ? (
         <div className="flex-row">
           {filterGames().map((game) => (
